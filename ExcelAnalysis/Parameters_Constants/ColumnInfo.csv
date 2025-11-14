@@ -1,0 +1,5 @@
+"ColumnName","DataType","SampleValues","UniqueCount","HasNulls"
+"CNTR_CBAMPeriod","System.String","1, 2, 3, 4, 5","698","No"
+"Transitional","System.String","1, 1000Nm3, 1000Nm3/h, 1000Nm3/Year, 11100","78","No"
+"Name of this sheet:","System.Object","% Cr, % N as Urea, % Ni, % pre-consumer scrap, False","23","Yes"
+"Parameters_Constants","System.Object","% carbon, % N in other (organic) forms, % Ni, % other alloys, 5","453","No"

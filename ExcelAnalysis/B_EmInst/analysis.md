@@ -1,0 +1,100 @@
+﻿"
+# B_EmInst Sheet Analysis
+
+## Overview
+This document provides an analysis of the B_EmInst sheet from the CBAM Excel template.
+
+## Column Information
+
+| Column Name | Data Type | Sample Value | Unique Count | Null Count |
+|-------------|-----------|--------------|--------------|------------|
+"
+| P1 | Text | ausblenden | 4 | 0 |
+| P2 | Text | Source streams | 1 | 0 |
+| P3 | Number | B. | 84 | 0 |
+| P4 | Text | Sheet "B_EmInst" - Installation's emission at source stream and emission source level | 14 | 0 |
+| P5 | Text | Navigation Area: | 10 | 0 |
+| P6 | Text | Activity data (AD) | 5 | 0 |
+| P7 | Text | Table of contents | 4 | 0 |
+| P8 | Text | Net calorific value (NCV) | 2 | 0 |
+| P9 | Text | Further Guidance | 5 | 75 |
+| P10 | Text | Emission factor (EF) | 3 | 0 |
+| P11 | Text | Summary_Processes | 6 | 1 |
+| P12 | Text | Carbon content | 2 | 0 |
+| P13 | Text | Summary_Products | 4 | 77 |
+| P14 | Text | Oxidation factor (OxF) | 2 | 0 |
+| P15 | Text | OxF Unit | 2 | 0 |
+| P16 | Text | Conversion factor (ConvF) | 2 | 0 |
+| P17 | Text | ConvF Unit | 2 | 0 |
+| P18 | Text | Biomass content (BioC) | 4 | 4 |
+| P19 | Text | BioC Unit | 2 | 0 |
+| P20 | Text | ausblenden | 3 | 0 |
+| P21 | Text | ausblenden | 4 | 0 |
+| P22 | Text | hourly GHG conc. Average | 3 | 0 |
+| P23 | Text | hourly GHG conc. Unit | 2 | 0 |
+| P24 | Text | hours operating | 3 | 0 |
+| P25 | Text | hours operating Unit | 2 | 0 |
+| P26 | Text | Flue gas flow (average) | 3 | 0 |
+| P27 | Text | Flue gas flow (average), Unit | 2 | 0 |
+| P28 | Text | ausblenden | 3 | 0 |
+| P29 | Text | ausblenden | 3 | 0 |
+| P30 | Text | Annual amount of GHG | 4 | 10 |
+| P31 | Text | Annual amount of GHG Unit | 2 | 0 |
+| P32 | Text | GWP (tCO2e/t) | 4 | 10 |
+| P33 | Text | A: Frequency | 2 | 0 |
+| P34 | Text | A: Duration | 2 | 0 |
+| P35 | Text | A: SEF(CF4) | 2 | 0 |
+| P36 | Text | B: AEO | 1 | 0 |
+| P37 | Text | B: CE | 1 | 0 |
+| P38 | Text | B: OVC | 1 | 0 |
+| P39 | Text | F(C2F6) | 2 | 0 |
+| P40 | Text | CF4 Emissions (t CF4) | 3 | 10 |
+| P41 | Text | C2F6 Emissions (t C2F6) | 3 | 10 |
+| P42 | Text | GWP (CF4) (tCO2e/t) | 3 | 10 |
+| P43 | Text | GWP (C2F6) (tCO2e/t) | 3 | 10 |
+| P44 | Text | CF4 Emissions (t CO2e) | 3 | 10 |
+| P45 | Text | C2F6 Emissions (t CO2e) | 3 | 10 |
+| P46 | Text | Collection efficiency, % | 2 | 0 |
+| P47 | Text | CO2e fossil (t) | 9 | 95 |
+| P48 | Text | CO2e bio (t) | 4 | 89 |
+| P49 | Text | ausblenden | 4 | 2 |
+| P50 | Text | Energy content (fossil), TJ | 4 | 79 |
+| P51 | Text | Energy content (bio), TJ | 3 | 80 |
+| P52 | Text | ausblenden | 2 | 0 |
+| P53 | Text | ausblenden | 9 | 0 |
+| P54 | Text | ausblenden | 3 | 0 |
+| P55 | Text | ausblenden | 3 | 0 |
+| P56 | Text | ausblenden | 6 | 77 |
+| P57 | Text | ausblenden | 9 | 87 |
+| P58 | Text | ausblenden | 8 | 87 |
+| P59 | Text | ausblenden | 1 | 0 |
+| P60 | Text | ausblenden | 8 | 78 |
+| P61 | Text | ausblenden | 6 | 88 |
+| P62 | Text | ausblenden | 4 | 78 |
+| P63 | Text | ausblenden | 4 | 10 |
+| P64 | Text | ausblenden | 6 | 75 |
+| P65 | Text | ausblenden | 3 | 75 |
+| P66 | Text | ausblenden | 3 | 75 |
+| P67 | Text | ausblenden | 3 | 75 |
+| P68 | Boolean | ausblenden | 3 | 0 |
+| P69 | Text | ausblenden | 1 | 0 |
+| P70 | Text | ausblenden | 5 | 75 |
+| P71 | Text | ausblenden | 4 | 77 |
+| P72 | Text | ausblenden | 4 | 77 |
+| P73 | Text | ausblenden | 4 | 77 |
+| P74 | Text | ausblenden | 1 | 0 |
+| P75 | Text | ausblenden | 3 | 95 |"
+
+## Raw Data
+The raw data for this sheet is available in [raw_data.csv](raw_data.csv).
+
+## Column Details
+The detailed column information is available in [column_info.csv](column_info.csv).
+
+## Notes
+
+## Questions
+
+## Next Steps
+
+"

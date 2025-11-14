@@ -1,0 +1,898 @@
+"P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17","P18","P19","P20","P21","P22","P23","P24","P25","P26"
+"ausblenden",,,,,,,,,,,,,,,"ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden"
+,"Purchased precursors",,,"Navigation Area:",,"Table of contents",,"Further Guidance",,"Summary_Processes",,"Summary_Products",,,,,"Print area:","$B$12:$O$895","Name of this sheet","E_PurchPrec",,,,,
+,,,,"",,"",,"",,"",,"",,,,,"1",,"2",,"3",,"4",,"5"
+,,,,"",,"",,"",,"",,"",,,,,"6",,"7",,"8",,"9",,"10"
+,,,,"",,"",,"",,"",,"",,,,,"11",,"12",,"13",,"14",,"15"
+,,,,"",,"",,"",,"",,"",,,,,"16",,"17",,"18",,"19",,"20"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"E.",,"Sheet ""E_PurchPrec"" - Purchased precursors for SEE calculation",,,,,,,,,,,,,"Marker","EmbedEm",,,"Errors",,,,"Cond. form."
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+"1",,,"Data input for the determination of the specific embedded emissions",,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,"TRUE = green, n.a. = white",,,,
+,,"1","Purchased precursor 1:",,,"",,,,,"",,,,,,"PP1",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"2","Purchased precursor 2:",,,"",,,,,"",,,,,,"PP2",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"3","Purchased precursor 3:",,,"",,,,,"",,,,,,"PP3",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"4","Purchased precursor 4:",,,"",,,,,"",,,,,,"PP4",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"5","Purchased precursor 5:",,,"",,,,,"",,,,,,"PP5",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"6","Purchased precursor 6:",,,"",,,,,"",,,,,,"PP6",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"7","Purchased precursor 7:",,,"",,,,,"",,,,,,"PP7",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"8","Purchased precursor 8:",,,"",,,,,"",,,,,,"PP8",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"9","Purchased precursor 9:",,,"",,,,,"",,,,,,"PP9",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"10","Purchased precursor 10:",,,"",,,,,"",,,,,,"PP10",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"11","Purchased precursor 11:",,,"",,,,,"",,,,,,"PP11",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"12","Purchased precursor 12:",,,"",,,,,"",,,,,,"PP12",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"13","Purchased precursor 13:",,,"",,,,,"",,,,,,"PP13",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"14","Purchased precursor 14:",,,"",,,,,"",,,,,,"PP14",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"15","Purchased precursor 15:",,,"",,,,,"",,,,,,"PP15",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"16","Purchased precursor 16:",,,"",,,,,"",,,,,,"PP16",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"17","Purchased precursor 17:",,,"",,,,,"",,,,,,"PP17",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"18","Purchased precursor 18:",,,"",,,,,"",,,,,,"PP18",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"19","Purchased precursor 19:",,,"",,,,,"",,,,,,"PP19",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"20","Purchased precursor 20:",,,"",,,,,"",,,,,,"PP20",,,,,,,"Not relevant:","False"
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,"(a) ","Total purchased levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,,"cond.format",
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,,"",
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,,"",
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,,"",
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,,"",
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,,"",
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,,"",
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,,"",
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,,"",
+,,,,"Total purchase for possible consumption within installation:",,,,,,"","",,,,,,"TotProd_",,"",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Consumed in 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,,,,
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.",,,"cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,,,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,,,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,,,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,,,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,,,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,,,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,,,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,,,"False"
+,,,"10","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,,,"False"
+,,,"(c)","Consumed for other purposes, e.g. sold or used for non-CBAM goods:",,,,,,"",,,,,,,,,,,"n.a.",,,,
+,,,"(d)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Specific embedded emissions:",,,,,,"",,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(e)","Emissions embedded in this purchased precursor",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","4",,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Parameter:",,,,,,"Unit","Value","Source",,,,,,,"Value","Incomplete?","Error?",,,,
+,,,"i.","Specific embedded direct emissions (SEE (direct))",,,,,,"",,,,,,,"PurchPrecDef_","EmbedEmDir_","","","n.a.",,,,
+,,,"ii.","Specific electricity consumption (for SEE (indirect))",,,,,,"",,,,,,,"ElecCons_",,"","","n.a.",,,,
+,,,"iii.","Electricity emission factor (for SEE (indirect))",,,,,,"",,,,,,,"ElecEFMeth_",,,"","n.a.",,,,
+,,,"iv.","Specific embedded indirect emissions (SEE (indirect))",,,,,,"","",,,,,,,"EmbedEmInDir_","",,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Justification for use of default values (if relevant):",,,,,,,,,,,,,,,,,"n.a.",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,"PRINT",,,,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,,,,,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,,,,,,,,,,,

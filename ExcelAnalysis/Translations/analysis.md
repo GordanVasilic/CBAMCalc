@@ -1,0 +1,38 @@
+﻿"
+# Translations Sheet Analysis
+
+## Overview
+This document provides an analysis of the Translations sheet from the CBAM Excel template.
+
+## Column Information
+
+| Column Name | Data Type | Sample Value | Unique Count | Null Count |
+|-------------|-----------|--------------|--------------|------------|
+"
+| P1 | Number | 3 | 2122 | 0 |
+| P2 | Text | If you want to translate the guidance text in this template into another language, please select the next available column (first one available is column D) and copy the text in the new language into the corresponding rows and select the column number (e.g. "4" for column D) in cell A3. | 2115 | 0 |
+| P3 | Text | English Version (Original) | 2113 | 0 |
+| P4 | Text | Language 2 | 1 | 0 |
+| P5 | Text | Language 2 | 1 | 0 |
+| P6 | Text | Language 3 | 1 | 0 |
+| P7 | Text | Language 4 | 1 | 0 |
+| P8 | Text | Language 5 | 1 | 0 |
+| P9 | Text | Language 6 | 1 | 0 |
+| P10 | Text | Language 7 | 1 | 0 |
+| P11 | Text | Language 8 | 1 | 0 |
+| P12 | Text | Language 9 | 1 | 0 |
+| P13 | Text | Language 10 | 1 | 0 |"
+
+## Raw Data
+The raw data for this sheet is available in [raw_data.csv](raw_data.csv).
+
+## Column Details
+The detailed column information is available in [column_info.csv](column_info.csv).
+
+## Notes
+
+## Questions
+
+## Next Steps
+
+"

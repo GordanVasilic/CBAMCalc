@@ -1,0 +1,665 @@
+"P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17","P18","P19","P20","P21","P22","P23","P24"
+"ausblenden",,,,,,,,,,,,,,,"ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden"
+,"Production processes",,,"Navigation Area:",,"Table of contents",,"Further Guidance",,"Summary_Processes",,"Summary_Products",,,,,"Print area:","$B$2:$O$662","Name of this sheet","D_Processes",,,
+,,,,,,"",,"",,"",,"",,,,,"1",,"2",,"3",,"4"
+,,,,,,"",,"",,"",,"",,,,,"5",,"6",,"7",,"8"
+,,,,,,"",,"",,,,,,,,,"9",,"10",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"D.",,"Sheet ""D_Processes"" - Production level and attributed emissions for SEE calculation",,,,,,,,,,,,,"Marker","EmbedEm",,,"Errors",,"Cond. form."
+,,,,,,,,,,,,,,,,,,,,,,,
+"1",,,"Data input for the determination of the specific embedded emissions",,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"1","Production process 1:",,,"",,,,,"",,,,,,"1",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"2","Production process 2:",,,"",,,,,"",,,,,,"2",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"3","Production process 3:",,,"",,,,,"",,,,,,"3",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"4","Production process 4:",,,"",,,,,"",,,,,,"4",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"5","Production process 5:",,,"",,,,,"",,,,,,"5",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"6","Production process 6:",,,"",,,,,"",,,,,,"6",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Measurable heat","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"7","Production process 7:",,,"",,,,,"",,,,,,"7",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"8","Production process 8:",,,"",,,,,"",,,,,,"8",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Exported",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"9","Production process 9:",,,"",,,,,"",,,,,,"9",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","10","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,"10","Production process 10:",,,"",,,,,"",,,,,,"10",,,,,"Not relevant:","False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a) ","Total production levels:",,,"Production route",,,"Unit","Amounts",,,,,,,,,,,,
+,,,"1","",,,"",,,"",,,,,,,,"1",,,"n.a.",,
+,,,"2","",,,"",,,"",,,,,,,,"2",,,"n.a.",,
+,,,"3","",,,"",,,"",,,,,,,,"3",,,"n.a.",,
+,,,"4","",,,"",,,"",,,,,,,,"4",,,"n.a.",,
+,,,"5","",,,"",,,"",,,,,,,,"5",,,"n.a.",,
+,,,"6","",,,"",,,"",,,,,,,,"6",,,"n.a.",,
+,,,"7","",,,"",,,"",,,,,,,,"7",,,"n.a.",,
+,,,"8","",,,"",,,"",,,,,,,,"8",,,"n.a.",,
+,,,,"Total production within installation (= denominator for SEE calculation):",,,,,,"","",,,,,,"TotProd_",,"",,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Production details",,,,,,"Unit","Amounts",,,,,,,,,,,,
+,,,"i.","Produced for the market",,,,,,"",,,,,,,"ToMarket_",,"",,"n.a.",,
+,,,"ii.","Share of total under (a) produced for the market",,,,,,,"",,,,,,,,,,,,
+,,,"iii.","Total production only for the market?",,,,,,,"",,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Consumed in other 'production processes' within the installation:",,,,,,"Unit","Amounts",,,,,,,"Numbering",,,,"cond.form.","False"
+,,,"1","",,,,,,"",,,,,,,"PrecToGood__","1","",,"n.a.","cond.form.","False"
+,,,"2","",,,,,,"",,,,,,,"PrecToGood__","2","",,"n.a.",,"False"
+,,,"3","",,,,,,"",,,,,,,"PrecToGood__","3","",,"n.a.",,"False"
+,,,"4","",,,,,,"",,,,,,,"PrecToGood__","4","",,"n.a.",,"False"
+,,,"5","",,,,,,"",,,,,,,"PrecToGood__","5","",,"n.a.",,"False"
+,,,"6","",,,,,,"",,,,,,,"PrecToGood__","6","",,"n.a.",,"False"
+,,,"7","",,,,,,"",,,,,,,"PrecToGood__","7","",,"n.a.",,"False"
+,,,"8","",,,,,,"",,,,,,,"PrecToGood__","8","",,"n.a.",,"False"
+,,,"9","",,,,,,"",,,,,,,"PrecToGood__","9","",,"n.a.",,"False"
+,,,"(d)","Consumed for non-CBAM goods within the installation:",,,,,,"",,,,,,,,,,,"n.a.","cond.form.","False"
+,,,"(e)","Control:",,,,,,"","",,,,,,,,,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"Calculation of the attributed emissions:",,,,,,"",,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please click on this link for further guidance on how to complete this section.",,,,,,,,,,,,,"Link to guidance:","3",,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Measurable heat","Waste gases","Indirect emissions",,,,,,,,,,,
+,,,"(f)","Please select which elements are applicable",,,,,,,,"",,,,,,,,,"n.a.",,
+,,,,"Based on your selection, related sections below might become irrelevant and greyed out below.",,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"(g)","Directly attributable emissions (DirEm*)",,,,,,"tCO2e",,,,,,,"EmDir_","EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(h)","Import and export of measurable heat",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of net measurable heat",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emissions factor",,,,,,"tCO2/TJ",,,,,,,"EmDirHeat_","EmbedEmDir_","",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(i)","Waste gases",,,,,,"Unit","Imported","Exported",,,,,,,,,,"cond.form.","False"
+,,,"i.","Amount of waste gas",,,,,,"TJ",,,,,,,,,,,"n.a.",,"False"
+,,,"ii.","Emission factor",,,,,,"tCO2/TJ",,,,,,,"EmDirWG_","EmbedEmDir_","",,,,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(j)","Indirect emissions from electricity consumption",,,,,,"Unit","Value",,,,,,,,,,,"cond.form.","False"
+,,,"i.","Electricity consumption",,,,,,"MWh",,,,,,,"ElecCons_",,"",,"n.a.",,"False"
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmInDir_","",,"n.a.",,"False"
+,,,"iii.","Source of the emission factor",,,,,,"-",,,,,,,"ElecEFMeth_",,"",,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(k)","Electricity exported from the production process",,,,,,"Unit","Value",,,,,,,,,,,,
+,,,"i.","Amounts exported",,,,,,"MWh",,,,,,,,,,,"n.a.",,
+,,,"ii.","Emission factor of the electricity",,,,,,"tCO2/MWh",,,,,,,,"EmbedEmDir_","",,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,"PRINT",,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,,,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,,,,,,,,,

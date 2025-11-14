@@ -1,0 +1,66 @@
+﻿"
+# Summary_Processes Sheet Analysis
+
+## Overview
+This document provides an analysis of the Summary_Processes sheet from the CBAM Excel template.
+
+## Column Information
+
+| Column Name | Data Type | Sample Value | Unique Count | Null Count |
+|-------------|-----------|--------------|--------------|------------|
+"
+| P1 | Text | ausblenden | 4 | 0 |
+| P2 | Text | Summary of production processes | 1 | 0 |
+| P3 | Number | 1 | 30 | 0 |
+| P4 | Text | Summary of the installation, processes and production routes | 78 | 320 |
+| P5 | Text | Name of the installation (English name): | 27 | 80 |
+| P6 | Text | Navigation Area: | 29 | 400 |
+| P7 | Text |  | 10 | 358 |
+| P8 | Text | Table of contents | 10 | 392 |
+| P9 | Text | Route 3 | 7 | 381 |
+| P10 | Text | Further Guidance | 11 | 402 |
+| P11 | Text | Reporting period start: | 10 | 404 |
+| P12 | Text | Detailed overview | 13 | 387 |
+| P13 | Text | Description and indication of legal act for the carbon price, and for possible rebate or other form of compensation obtained. | 6 | 330 |
+| P14 | Text | Summary_Products | 6 | 342 |
+| P15 | Text | unit | 4 | 320 |
+| P16 | Text | Embedded electricity | 3 | 320 |
+| P17 | Text | Country code | 3 | 300 |
+| P18 | Text | CP due (per produced t or MWh) | 2 | 320 |
+| P19 | Text | Rebate (per produced t or MWh) | 2 | 320 |
+| P20 | Unknown |  | 0 | 0 |
+| P21 | Text | ausblenden | 2 | 0 |
+| P22 | Text | ausblenden | 7 | 0 |
+| P23 | Text | ausblenden | 41 | 0 |
+| P24 | Text | ausblenden | 6 | 40 |
+| P25 | Text | ausblenden | 5 | 40 |
+| P26 | Text | ausblenden | 6 | 40 |
+| P27 | Text | ausblenden | 4 | 40 |
+| P28 | Text | ausblenden | 8 | 40 |
+| P29 | Text | ausblenden | 4 | 40 |
+| P30 | Text | ausblenden | 6 | 330 |
+| P31 | Text | ausblenden | 3 | 300 |
+| P32 | Text | ausblenden | 2 | 0 |
+| P33 | Text | ausblenden | 5 | 310 |
+| P34 | Text | ausblenden | 1 | 0 |
+| P35 | Text | ausblenden | 1 | 0 |
+| P36 | Text | ausblenden | 1 | 0 |
+| P37 | Text | ausblenden | 1 | 0 |
+| P38 | Text | ausblenden | 1 | 0 |
+| P39 | Text | ausblenden | 1 | 0 |
+| P40 | Text | ausblenden | 1 | 0 |
+| P41 | Text | ausblenden | 1 | 0 |"
+
+## Raw Data
+The raw data for this sheet is available in [raw_data.csv](raw_data.csv).
+
+## Column Details
+The detailed column information is available in [column_info.csv](column_info.csv).
+
+## Notes
+
+## Questions
+
+## Next Steps
+
+"

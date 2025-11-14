@@ -1,0 +1,126 @@
+"P1","P2","P3","P4","P5","P6","P7","P8","P9","P10","P11","P12","P13","P14","P15","P16","P17","P18","P19","P20","P21","P22","P23","P24","P25","P26","P27","P28","P29","P30","P31","P32","P33","P34","P35"
+"ausblenden",,,,,,,,,,,,,,,"ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden","ausblenden"
+,"InstData",,,"Navigation Area:",,"Table of contents",,"Further Guidance",,"Summary_Processes",,"Summary_Products",,,,,"Print area:","$B$6:$O$123","Name of this sheet","A_InstData",,,,,,,,,,,,,,
+,,,,,,"Reporting period",,"About the installation",,"Verifier",,"Goods & precursors",,,,,"1",,"2",,"3",,"4",,,,,,,,,,,
+,,,,,,"Purchased precursors",,,,,,,,,,,"5",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,"A.",,"Sheet ""A_InstData"" - General information, production processes and purchased precursors ",,,,,,,,,,,,,"Marker",,,,,,,,,,,,,,,"Errors",,"Cond. form."
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"1",,"1","Reporting period",,,,"Start:",,,"End:",,,,,,,"Reporting period",,,,,,,,,,,,,,,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please enter here the starting date and the end date of the reporting period to which the data entered in this communication template refers to. For example, if you want to report data based on the whole calendar year 2023, the starting date would be 1.1.2023 and the end date 31.12.2023.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"It is important that all data entered in this template (embedded emissions, carbon price due, product properties, etc.) all relate to that same reporting period entered above.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"2",,"2","About the installation",,,,,,,,,,,,,,"About the installation",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"i.","Name of the installation (optional):",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"ii.","Name of the installation (English name):",,,,,,,,,,,,,,,,,,,,,,,,,,,,"n.a.",,
+,,,"iii.","Street, Number:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"iv.","Economic activity:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Post code:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"vi.","P.O. Box:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"vii.","City:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"viii.","Country:",,,,,,,,,,,,,,"",,,,,,,,,,,,,,"n.a.",,
+,,,"ix.","UNLOCODE:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"x.","Coordinates of the main emission source (latitude):",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"xi.","Coordinates of the main emission source (longitude):",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"xii.","Name of authorized representative:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"xiii.","Email:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"xiv.","Telephone:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"3",,"3","Verifier of the report ? only if available and not required during transitional period",,,,,,,,,,,,,,"Verifier",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a)","Name and address of the verifier of this report:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"i.","Company Name:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"ii.","Street, Number:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"iii.","City:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"iv.","Postcode/ZIP:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"v.","Country:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Authorised representative of the verifier:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"The nominated person should be familiar with this report. Ideally it is the lead verifier involved with this report.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"i.","Name:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"ii.","Email address:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"iii.","Telephone number:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"iv.","Fax:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(c)","Information about the verifier's accreditation:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"i.","Accreditation Member State:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"ii.","Name of the national accreditation body:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"iii.","Registration number issued by the Accreditation body:",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"4",,"4","Aggregated goods categories and relevant production processes",,,,,,,,,,,,,,"Goods & precursors",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(a)","List of aggregated goods categories, relevant precursors and corresponding production routes",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please list here ALL aggregated goods categories, including any relevant precursor types produced WITHIN the installation.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Where relevant, please list all production routes through which the aggregated goods are produced.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"ID","Aggregated goods category",,"Route",,"Route 1","Route 2","Route 3","Route 4","Route 5","Route 6",,,,"CNTR_List_ExistGoodTypesInclDir","Only direct production",,,,"GoodID","RouteID 1","RouteID 2","RouteID 3","RouteID 4","RouteID 5","RouteID 6",,"Incomplete?",,,"PFC emissions relevant?",
+,,,"G1",,,"",,,,,,,,,,,"CNTR_List_ExistGoodTypes","n.a.","",,"G1","","","","","","","",,"",,"n.a.","","False"
+,,,"G1",,,"",,,,,,,,,,,,"n.a.","",,"G1","","","","","","","",,"",,,"","False"
+,,,"G3",,,"",,,,,,,,,,,,"n.a.","",,"G3","","","","","","","",,"",,,"","False"
+,,,"G4",,,"",,,,,,,,,,,,"n.a.","",,"G4","","","","","","","",,"",,,"","False"
+,,,"G5",,,"",,,,,,,,,,,,"n.a.","",,"G5","","","","","","","",,"",,,"","False"
+,,,"G6",,,"",,,,,,,,,,,,"n.a.","",,"G6","","","","","","","",,"",,,"","False"
+,,,"G7",,,"",,,,,,,,,,,,"n.a.","",,"G7","","","","","","","",,"",,,"","False"
+,,,"G8",,,"",,,,,,,,,,,,"n.a.","",,"G8","","","","","","","",,"",,,"","False"
+,,,"G9",,,"",,,,,,,,,,,,"n.a.","",,"G9","","","","","","","",,"",,,"","False"
+,,,"G10",,,"",,,,,,,,,,,,"n.a.","",,"G10","","","","","","","",,"",,,"","False"
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"For information, emissions from the following precursors are relevant for the embedded emissions of the types of aggregated goods listed above. Where those precursors are actually relevant for your production processes, please make sure those are also listed either as products in the table above (if produced within your installation) or under section 5 ""purchased precursors"" below (where produced in other installations). Please note that for some goods the same aggregated good category itself can be a relevant precursor (e.g. iron & steel products, aluminium products, mixed fertilisers).",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Relevant precursors:",,"","","","","","","","",,,,,,,,,,,,,,,,,,,,,
+,,,,,,"","","","","","","","",,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"(b)","Relevant production processes",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Based on the list under (a), please list here only aggregated goods categories (G1, G2, etc.) for which you want to establish distinct ""production process"" and assign all aggregated goods categories and relevant precursors that will be covered by its system boundary. Where the selected ""production process"" only includes the one aggregated goods category selected, please select ""only direct production"" in column F.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Example: If ""ammonia"" and ""nitric acid"" are both produced in your installation, you may either create a separate production process for each of these good types, or report them combined under 'nitric acid' under a 'bubble approach'. In the case of the latter, please select as of column F which other process you want to include under this 'bubble approach'. Note: the 'bubble approach' is only allowed if all ammonia produced is processed into nitric acid. If parts of the ammonia are exported from the installation, two separate production processes have to be entered here.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"ID","Aggregated goods category","Included goods categories listed under (a)",,,,,,"Name",,"Error message",,,,,,,,,,,,,,,,,,,,,
+,,,,,"1","2","3","4","5","6",,,,,,,,"CNTR_List_ExistProdProc","CNTR_List_ExistProdProcNames",,,"GoodID","PrecID 1","PrecID 2","PrecID 3","PrecID 4","PrecID 5","PrecID 6","ProdRoute",,,,,
+,,,"P1",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P1","","","","","","","","",,,"n.a.",,"False"
+,,,"P2",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P2","","","","","","","","",,,"n.a.",,"False"
+,,,"P3",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P3","","","","","","","","",,,"n.a.",,"False"
+,,,"P4",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P4","","","","","","","","",,,"n.a.",,"False"
+,,,"P5",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P5","","","","","","","","",,,"n.a.",,"False"
+,,,"P6",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P6","","","","","","","","",,,"n.a.",,"False"
+,,,"P7",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P7","","","","","","","","",,,"n.a.",,"False"
+,,,"P8",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P8","","","","","","","","",,,"n.a.",,"False"
+,,,"P9",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P9","","","","","","","","",,,"n.a.",,"False"
+,,,"P10",,,,,,,,,,"",,,,,"n.a.","n.a.",,"P10","","","","","","","","",,,"n.a.",,"False"
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,"Completeness check:","",,,,,,,,,,,,,,,,,,,,,,,,,"n.a.",,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"5",,"5","Purchased precursors",,,,,,,,,,,,,,"Purchased precursors",,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please list here all precursors that are produced OUTSIDE the installation (e.g. purchased) and consumed within the installation.",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,"Please also list the country in which the relevant precursor was produced (see sheet ""c_CodeLists"" to find the correct country codes) and the relevant production routes, if known.",,,,,,,,,,,,,,,,"For drop-Down",,,"CNTR_MatrixPurchPrecRoutes",,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,"ID","Production process","Country code","Route 1","Route 2","Route 3","Route 4","Route 5","Name",,"Error message",,,,,"CNTR_List_ExistPurchPrec","CNTR_List_ExistPurchPrecNames",,,"GoodID","RouteID 1","RouteID 2","RouteID 3","RouteID 4","RouteID 5",,,,,,"ProdRoute All?",
+,,,"PP1",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP1","","","","","","",,,,,"n.a.","","False"
+,,,"PP2",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP2","","","","","","",,,,,"n.a.","","False"
+,,,"PP3",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP3","","","","","","",,,,,"n.a.","","False"
+,,,"PP4",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP4","","","","","","",,,,,"n.a.","","False"
+,,,"PP5",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP5","","","","","","",,,,,"n.a.","","False"
+,,,"PP6",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP6","","","","","","",,,,,"n.a.","","False"
+,,,"PP7",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP7","","","","","","",,,,,"n.a.","","False"
+,,,"PP8",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP8","","","","","","",,,,,"n.a.","","False"
+,,,"PP9",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP9","","","","","","",,,,,"n.a.","","False"
+,,,"PP10",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP10","","","","","","",,,,,"n.a.","","False"
+,,,"PP11",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP11","","","","","","",,,,,"n.a.","","False"
+,,,"PP12",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP12","","","","","","",,,,,"n.a.","","False"
+,,,"PP13",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP13","","","","","","",,,,,"n.a.","","False"
+,,,"PP14",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP14","","","","","","",,,,,"n.a.","","False"
+,,,"PP15",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP15","","","","","","",,,,,"n.a.","","False"
+,,,"PP16",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP16","","","","","","",,,,,"n.a.","","False"
+,,,"PP17",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP17","","","","","","",,,,,"n.a.","","False"
+,,,"PP18",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP18","","","","","","",,,,,"n.a.","","False"
+,,,"PP19",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP19","","","","","","",,,,,"n.a.","","False"
+,,,"PP20",,,,,,,,,,"",,,,,"n.a.","n.a.","","PP20","","","","","","",,,,,"n.a.","","False"
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,"PRINT",,,,,,,,,,,,,,,,,,,
+"ausblenden",,,,,,,,,"CNTR_HasEntriesA","False",,,,,,,,,,,,,,,,,,,,,,,,
+"ausblenden",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
