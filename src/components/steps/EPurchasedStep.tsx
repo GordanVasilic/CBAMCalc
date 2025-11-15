@@ -310,6 +310,24 @@ const EPurchasedStep: React.FC<EPurchasedStepProps> = ({ data, onUpdate }) => {
             />
           </Grid>
           <Grid item xs={12} md={6}>
+            <TextField
+              fullWidth
+              label="Proizvodna ruta"
+              value={currentPrecursor.productionRoute || ''}
+              onChange={(e) => handlePrecursorChange('productionRoute', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <TextField
+              fullWidth
+              label="Proces"
+              value={currentPrecursor.productionProcess || ''}
+              onChange={(e) => handlePrecursorChange('productionProcess', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={6}>
             <FormControl fullWidth margin="normal">
               <InputLabel>Tip prekursora</InputLabel>
               <Select
@@ -383,6 +401,116 @@ const EPurchasedStep: React.FC<EPurchasedStepProps> = ({ data, onUpdate }) => {
               margin="normal"
             />
           </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="EF električne energije"
+              type="number"
+              value={currentPrecursor.electricityEmissionFactor || 0}
+              onChange={(e) => handlePrecursorChange('electricityEmissionFactor', parseFloat(e.target.value) || 0)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="Jedinica EF (el.)"
+              value={currentPrecursor.electricityEmissionFactorUnit || ''}
+              onChange={(e) => handlePrecursorChange('electricityEmissionFactorUnit', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="Izvor EF (el.)"
+              value={currentPrecursor.electricityEmissionFactorSource || ''}
+              onChange={(e) => handlePrecursorChange('electricityEmissionFactorSource', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <FormControl fullWidth margin="normal">
+              <InputLabel>Izvor direktnih emisija</InputLabel>
+              <Select
+                value={currentPrecursor.directEmissionsDataSource || 'Supplier data'}
+                onChange={(e) => handlePrecursorChange('directEmissionsDataSource', e.target.value)}
+              >
+                {['Supplier data', 'Default values', 'Calculated', 'Estimated', 'Other'].map(option => (
+                  <MenuItem key={option} value={option}>{option}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="Nesigurnost direktnih emisija"
+              type="number"
+              value={currentPrecursor.directEmissionsUncertainty || 0}
+              onChange={(e) => handlePrecursorChange('directEmissionsUncertainty', parseFloat(e.target.value) || 0)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <FormControl fullWidth margin="normal">
+              <InputLabel>Jedinica ne‑CBAM</InputLabel>
+              <Select
+                value={currentPrecursor.nonCBAMUnit || 't'}
+                onChange={(e) => handlePrecursorChange('nonCBAMUnit', e.target.value)}
+              >
+                {UNITS.map(option => (
+                  <MenuItem key={option} value={option}>{option}</MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="Ne‑CBAM količina"
+              type="number"
+              value={currentPrecursor.nonCBAMQuantity || 0}
+              onChange={(e) => handlePrecursorChange('nonCBAMQuantity', parseFloat(e.target.value) || 0)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={8}>
+            <TextField
+              fullWidth
+              label="Obrazloženje ne‑CBAM"
+              value={currentPrecursor.nonCBAMJustification || ''}
+              onChange={(e) => handlePrecursorChange('nonCBAMJustification', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="Datum verifikacije"
+              value={currentPrecursor.verificationDate || ''}
+              onChange={(e) => handlePrecursorChange('verificationDate', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="Verifikator"
+              value={currentPrecursor.verifierName || ''}
+              onChange={(e) => handlePrecursorChange('verifierName', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
+          <Grid item xs={12} md={4}>
+            <TextField
+              fullWidth
+              label="Akreditacija"
+              value={currentPrecursor.verifierAccreditation || ''}
+              onChange={(e) => handlePrecursorChange('verifierAccreditation', e.target.value)}
+              margin="normal"
+            />
+          </Grid>
           <Grid item xs={12} md={6}>
             <FormControl fullWidth margin="normal">
               <InputLabel>Kvalitet podataka</InputLabel>
@@ -419,6 +547,113 @@ const EPurchasedStep: React.FC<EPurchasedStepProps> = ({ data, onUpdate }) => {
               onChange={(e) => handlePrecursorChange('notes', e.target.value)}
               margin="normal"
             />
+          </Grid>
+          <Grid item xs={12}>
+            <Typography variant="subtitle1" sx={{ mt: 2, mb: 1 }}>Alokacije prema procesima</Typography>
+            <TableContainer component={Paper} variant="outlined" sx={{ mb: 2 }}>
+              <Table size="small">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Proces</TableCell>
+                    <TableCell align="right">Količina</TableCell>
+                    <TableCell>Jedinica</TableCell>
+                    <TableCell>Tip</TableCell>
+                    <TableCell align="center">Akcije</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {(currentPrecursor.processConsumptions || []).map((pc: any, i: number) => (
+                    <TableRow key={`pc-${i}`}>
+                      <TableCell>{pc.processName || pc.processId}</TableCell>
+                      <TableCell align="right">{pc.quantity}</TableCell>
+                      <TableCell>{pc.unit}</TableCell>
+                      <TableCell>{pc.consumptionType}</TableCell>
+                      <TableCell align="center">
+                        <IconButton size="small" color="error" onClick={() => {
+                          const arr = [...(currentPrecursor.processConsumptions || [])];
+                          arr.splice(i, 1);
+                          handlePrecursorChange('processConsumptions', arr);
+                        }}>
+                          <DeleteIcon />
+                        </IconButton>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </TableContainer>
+            <Grid container spacing={2}>
+              <Grid item xs={12} md={6}>
+                <FormControl fullWidth>
+                  <InputLabel>Proces</InputLabel>
+                  <Select
+                    value={(currentPrecursor as any)._newPcProcessId || ''}
+                    onChange={(e) => {
+                      const pid = e.target.value as string;
+                      const proc = (data.dProcessesData?.productionProcesses || []).find((p: any) => p.id === pid);
+                      handlePrecursorChange('_newPcProcessId' as any, pid);
+                      handlePrecursorChange('_newPcProcessName' as any, proc?.name || pid);
+                    }}
+                  >
+                    {(data.dProcessesData?.productionProcesses || []).map((p: any) => (
+                      <MenuItem key={p.id} value={p.id}>{p.name || p.id}</MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <TextField
+                  fullWidth
+                  label="Količina"
+                  type="number"
+                  value={(currentPrecursor as any)._newPcQuantity || 0}
+                  onChange={(e) => handlePrecursorChange('_newPcQuantity' as any, parseFloat(e.target.value) || 0)}
+                />
+              </Grid>
+              <Grid item xs={12} md={3}>
+                <FormControl fullWidth>
+                  <InputLabel>Jedinica</InputLabel>
+                  <Select
+                    value={(currentPrecursor as any)._newPcUnit || 't'}
+                    onChange={(e) => handlePrecursorChange('_newPcUnit' as any, e.target.value)}
+                  >
+                    {UNITS.map(option => (
+                      <MenuItem key={option} value={option}>{option}</MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} md={4}>
+                <FormControl fullWidth>
+                  <InputLabel>Tip</InputLabel>
+                  <Select
+                    value={(currentPrecursor as any)._newPcType || 'consumption'}
+                    onChange={(e) => handlePrecursorChange('_newPcType' as any, e.target.value)}
+                  >
+                    {['input', 'consumption', 'other'].map(option => (
+                      <MenuItem key={option} value={option}>{option}</MenuItem>
+                    ))}
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} md={8}>
+                <Button variant="outlined" onClick={() => {
+                  const arr = [...(currentPrecursor.processConsumptions || [])];
+                  const pid = (currentPrecursor as any)._newPcProcessId || '';
+                  const pname = (currentPrecursor as any)._newPcProcessName || pid;
+                  const qty = Number((currentPrecursor as any)._newPcQuantity || 0) || 0;
+                  const unit = (currentPrecursor as any)._newPcUnit || 't';
+                  const type = (currentPrecursor as any)._newPcType || 'consumption';
+                  if (pid && qty > 0) {
+                    arr.push({ processId: pid, processName: pname, quantity: qty, unit, consumptionType: type });
+                    handlePrecursorChange('processConsumptions', arr);
+                    handlePrecursorChange('_newPcProcessId' as any, '');
+                    handlePrecursorChange('_newPcProcessName' as any, '');
+                    handlePrecursorChange('_newPcQuantity' as any, 0);
+                  }
+                }}>Dodaj alokaciju</Button>
+              </Grid>
+            </Grid>
           </Grid>
         </Grid>
       </DialogContent>

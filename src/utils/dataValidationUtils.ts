@@ -4,6 +4,7 @@
  */
 
 import { CBAMData, ValidationResult, CalculationResults, DataValidationStatus } from '../types/CBAMData';
+import { DProcessesData } from '../types/DProcessesTypes';
 
 /**
  * Validates CBAM data structure and content
@@ -28,7 +29,7 @@ export function validateCBAMData(data: CBAMData): ValidationResult {
     errors.push('Report configuration is required');
   } else {
     if (!data.reportConfig.reportingPeriod) errors.push('Reporting period is required');
-    if (!data.reportConfig.reportType) errors.push('Report type is required');
+    if (!data.reportConfig.reportType) warnings.push('Report type is recommended');
   }
   
   // Validate installation details
@@ -452,6 +453,87 @@ export function validateExcelCompatibility(data: CBAMData): ValidationResult {
   };
 }
 
+export function validateDProcessesData(d: DProcessesData): ValidationResult {
+  const errors: string[] = [];
+  const warnings: string[] = [];
+
+  const procs = d.productionProcesses || [];
+  procs.forEach((p) => {
+    if ((p.amounts || 0) < 0) errors.push(`Proces ${p.processNumber}: ukupna količina ne može biti negativna`);
+    if ((p.producedForMarket || 0) < 0) errors.push(`Proces ${p.processNumber}: tržišna količina ne može biti negativna`);
+    if ((p.producedForMarket || 0) > (p.amounts || 0)) errors.push(`Proces ${p.processNumber}: tržišna količina veća od ukupne`);
+    if ((p.shareProducedForMarket || 0) < 0 || (p.shareProducedForMarket || 0) > 100) errors.push(`Proces ${p.processNumber}: udio za tržište mora biti 0..100`);
+
+    if (p.measurableHeat?.imported !== undefined && (p.measurableHeat?.imported || 0) < 0) errors.push(`Proces ${p.processNumber}: uvezena toplina ne može biti negativna`);
+    if (p.measurableHeat?.exported !== undefined && (p.measurableHeat?.exported || 0) < 0) errors.push(`Proces ${p.processNumber}: izvezena toplina ne može biti negativna`);
+    if (p.measurableHeat?.emissionFactor !== undefined && (p.measurableHeat?.emissionFactor || 0) < 0) errors.push(`Proces ${p.processNumber}: EF topline ne može biti negativan`);
+    if (p.measurableHeat?.shareToCBAMGoods !== undefined) {
+      const v = p.measurableHeat?.shareToCBAMGoods || 0;
+      if (v < 0 || v > 100) errors.push(`Proces ${p.processNumber}: udio topline mora biti 0..100`);
+    }
+    if (p.measurableHeat?.applicable) {
+      if (p.measurableHeat.emissionFactor === undefined) errors.push(`Proces ${p.processNumber}: EF topline je obavezan kada je toplina primjenjiva`);
+    }
+
+    if (p.wasteGases?.imported !== undefined && (p.wasteGases?.imported || 0) < 0) errors.push(`Proces ${p.processNumber}: uvezeni otpadni plinovi ne mogu biti negativni`);
+    if (p.wasteGases?.exported !== undefined && (p.wasteGases?.exported || 0) < 0) errors.push(`Proces ${p.processNumber}: izvezeni otpadni plinovi ne mogu biti negativni`);
+    if (p.wasteGases?.emissionFactor !== undefined && (p.wasteGases?.emissionFactor || 0) < 0) errors.push(`Proces ${p.processNumber}: EF otpadnih plinova ne može biti negativan`);
+    if (p.wasteGases?.emissionFactorUnit && !['tCO2/TJ'].includes(p.wasteGases.emissionFactorUnit)) warnings.push(`Proces ${p.processNumber}: nepodržana jedinica EF otpadnih plinova`);
+    if (p.wasteGases?.amount !== undefined && (p.wasteGases?.amount || 0) < 0) errors.push(`Proces ${p.processNumber}: količina otpadnih plinova ne može biti negativna`);
+    if (p.wasteGases?.reusedShare !== undefined) {
+      const v = p.wasteGases?.reusedShare || 0;
+      if (v < 0 || v > 100) errors.push(`Proces ${p.processNumber}: iskorišteni udio mora biti 0..100`);
+    }
+
+    if (p.indirectEmissions?.electricityConsumption !== undefined && (p.indirectEmissions?.electricityConsumption || 0) < 0) errors.push(`Proces ${p.processNumber}: potrošnja električne energije ne može biti negativna`);
+    if (p.indirectEmissions?.emissionFactor !== undefined && (p.indirectEmissions?.emissionFactor || 0) < 0) errors.push(`Proces ${p.processNumber}: EF električne energije ne može biti negativan`);
+    if (p.indirectEmissions?.emissionFactorUnit && !['tCO2/MWh', 'tCO2/kWh', 'tCO2/GJ'].includes(p.indirectEmissions.emissionFactorUnit)) warnings.push(`Proces ${p.processNumber}: nepodržana jedinica EF električne energije`);
+    if (p.indirectEmissions?.applicable) {
+      if (p.indirectEmissions.emissionFactor === undefined) errors.push(`Proces ${p.processNumber}: EF električne energije je obavezan kada su neizravne emisije primjenjive`);
+      if (!p.indirectEmissions.emissionFactorUnit) errors.push(`Proces ${p.processNumber}: jedinica EF električne energije je obavezna`);
+    }
+
+    if (p.electricityExported?.exportedAmount !== undefined && (p.electricityExported?.exportedAmount || 0) < 0) errors.push(`Proces ${p.processNumber}: izvezena el. energija ne može biti negativna`);
+    if (p.electricityExported?.emissionFactor !== undefined && (p.electricityExported?.emissionFactor || 0) < 0) errors.push(`Proces ${p.processNumber}: EF izvezene el. energije ne može biti negativan`);
+    if (p.electricityExported?.emissionFactorUnit && !['tCO2/MWh', 'tCO2/kWh', 'tCO2/GJ'].includes(p.electricityExported.emissionFactorUnit)) warnings.push(`Proces ${p.processNumber}: nepodržana jedinica EF izvezene el. energije`);
+    if (p.electricityExported?.applicable) {
+      if ((p.electricityExported.exportedAmount || 0) > 0 && p.electricityExported.emissionFactor === undefined) errors.push(`Proces ${p.processNumber}: EF izvezene el. energije je obavezan kada je količina > 0`);
+      if ((p.electricityExported.exportedAmount || 0) > 0 && !p.electricityExported.emissionFactorUnit) errors.push(`Proces ${p.processNumber}: jedinica EF izvezene el. energije je obavezna`);
+    }
+
+    (p.inputOutputMatrix?.processToProcess || []).forEach((rowArr: any[]) => {
+      const row = (rowArr || [])[0] || {};
+      if (row.share !== undefined) {
+        const v = Number(row.share || 0);
+        if (v < 0 || v > 100) errors.push(`Proces ${p.processNumber}: udio Proces→Proces mora biti 0..100`);
+      }
+      if ((Number(row.share || 0) > 0) && (!row.calculationMethod || !String(row.calculationMethod).trim())) {
+        errors.push(`Proces ${p.processNumber}: metoda izračuna mora biti unesena za Proces→Proces kada je udio > 0`);
+      }
+      if (row.amount !== undefined && Number(row.amount || 0) < 0) errors.push(`Proces ${p.processNumber}: količina Proces→Proces ne može biti negativna`);
+    });
+
+    (p.inputOutputMatrix?.processToProduct || []).forEach((rowArr: any[]) => {
+      const row = (rowArr || [])[0] || {};
+      if (row.shareOfTotal !== undefined) {
+        const v = Number(row.shareOfTotal || 0);
+        if (v < 0 || v > 100) errors.push(`Proces ${p.processNumber}: udio Proces→Proizvod mora biti 0..100`);
+      }
+      if (row.amount !== undefined && Number(row.amount || 0) < 0) errors.push(`Proces ${p.processNumber}: količina Proces→Proizvod ne može biti negativna`);
+      if ((Number(row.shareOfTotal || 0) > 0) && (row.cbamRelevant === false)) {
+        warnings.push(`Proces ${p.processNumber}: udio Proces→Proizvod > 0 ali označeno kao ne‑CBAM relevantno`);
+      }
+    });
+
+    (p.inputOutputMatrix?.precursorConsumption || []).forEach((rowArr: any[]) => {
+      const row = (rowArr || [])[0] || {};
+      if (row.amount !== undefined && Number(row.amount || 0) < 0) errors.push(`Proces ${p.processNumber}: količina prekursora ne može biti negativna`);
+    });
+  });
+
+  return { isValid: errors.length === 0, errors, warnings };
+}
+
 /**
  * Validates CBAM data for all requirements
  * @param data - CBAM data to validate
@@ -700,9 +782,9 @@ export function validateCBAMSections(data: CBAMData, sections: ValidationSection
     if (!data.dProcessesData) {
       errors.push('D_Processes production processes data is required');
     } else {
-      if (data.dProcessesData.productionProcesses && data.dProcessesData.productionProcesses.length === 0) {
-        warnings.push('No production processes defined in D_Processes data');
-      }
+      const res = validateDProcessesData(data.dProcessesData as any);
+      errors.push(...res.errors);
+      warnings.push(...res.warnings);
     }
   }
 

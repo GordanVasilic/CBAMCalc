@@ -325,23 +325,23 @@ const EmissionInstallationStep: React.FC<EmissionInstallationStepProps> = ({
                     <TableCell>Emission Factor</TableCell>
                     <TableCell>EF Unit</TableCell>
                     <TableCell>
-                      <Tooltip title="Net calorific value (GJ po jedinici aktivnosti)">
-                        <span>NCV (GJ/unit)</span>
+                      <Tooltip title="Niža toplotna vrednost (NCV) – GJ po jedinici aktivnosti">
+                        <span>NCV (GJ/jedinica)</span>
                       </Tooltip>
                     </TableCell>
                     <TableCell>
-                      <Tooltip title="Carbon content per energy (tC/GJ), koristi se za mass balance">
-                        <span>Carbon Content</span>
+                      <Tooltip title="Sadržaj ugljenika po energiji (tC/GJ), koristi se za maseni bilans">
+                        <span>Sadržaj ugljenika</span>
                       </Tooltip>
                     </TableCell>
                     <TableCell>
-                      <Tooltip title="Oxidation factor (udio ugljika oksidiran u CO₂, 0–1)">
-                        <span>Oxidation Factor</span>
+                      <Tooltip title="Faktor oksidacije (udio ugljenika oksidiran u CO₂, 0–1)">
+                        <span>Faktor oksidacije</span>
                       </Tooltip>
                     </TableCell>
                     <TableCell>
-                      <Tooltip title="Conversion factor (tCO₂/tC = 44/12 = 3.667)">
-                        <span>Conversion Factor</span>
+                      <Tooltip title="Konverzioni faktor (tCO₂/tC = 44/12 = 3.667)">
+                        <span>Konverzioni faktor</span>
                       </Tooltip>
                     </TableCell>
                     <TableCell>CO₂ Emissions</TableCell>

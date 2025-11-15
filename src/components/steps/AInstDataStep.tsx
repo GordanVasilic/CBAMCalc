@@ -24,7 +24,8 @@ import {
 import {
   ExpandMore as ExpandMoreIcon,
   Add as AddIcon,
-  Info as InfoIcon
+  Info as InfoIcon,
+  DateRange as DateRangeIcon
 } from '@mui/icons-material';
 import { AInstData } from '../../types/AInstDataTypes';
 import { validateAInstData, ValidationStatus } from '../../utils/aInstDataCalculationEngine';
@@ -41,6 +42,8 @@ const AInstDataStep: React.FC<AInstDataStepProps> = ({ data, updateData, validat
   const [localValidation, setLocalValidation] = useState<ValidationStatus | null>(null);
   const [expandedSections, setExpandedSections] = useState<string[]>(['reporting', 'installation', 'representative']);
   const [validationTimeout, setValidationTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  const periodSummary = `${data.reportingPeriod.startDate || '—'} → ${data.reportingPeriod.endDate || '—'}`;
 
   // Memoizirana validacija s debouncingom
   const performValidation = useCallback(() => {
@@ -263,53 +266,17 @@ const AInstDataStep: React.FC<AInstDataStepProps> = ({ data, updateData, validat
     updateData(updatedData);
   };
 
-  const addPurchasedPrecursor = () => {
-    const newPrecursor = {
-      id: `PRE${data.purchasedPrecursors.length + 1}`,
-      name: '',
-      totalAmountConsumed: 0,
-      unit: '',
-      specificDirectEmbeddedEmissions: 0,
-      directEmissionsUnit: '',
-      directEmissionsDataSource: '',
-      electricityConsumption: 0,
-      electricityUnit: '',
-      electricityEmissionFactor: 0,
-      electricityEmissionFactorUnit: '',
-      electricityEmissionFactorSource: '',
-      usesDefaultValues: false
-    };
-    
-    const updatedData = {
-      ...data,
-      purchasedPrecursors: [...data.purchasedPrecursors, newPrecursor]
-    };
-    updateData(updatedData);
-  };
-
-  const updatePurchasedPrecursor = (index: number, field: string, value: any) => {
-    const updatedPrecursors = [...data.purchasedPrecursors];
-    updatedPrecursors[index] = {
-      ...updatedPrecursors[index],
-      [field]: value
-    };
-    
-    const updatedData = {
-      ...data,
-      purchasedPrecursors: updatedPrecursors
-    };
-    updateData(updatedData);
-  };
+  
 
   const currentValidation = validationStatus || localValidation;
 
   return (
     <Box className="form-section">
       <Typography variant="h5" component="h2" gutterBottom>
-        A_InstData - Podaci o instalaciji
+        Podaci o instalaciji
       </Typography>
       <Typography variant="body1" color="text.secondary" paragraph>
-        Unesite opće informacije o instalaciji, proizvodne procese i kupljene prekursora prema Excel predlošku.
+        Unesite opšte informacije o instalaciji i proizvodne procese prema Excel predlošku.
       </Typography>
       
       {currentValidation?.errors && currentValidation.errors.length > 0 && (
@@ -356,15 +323,25 @@ const AInstDataStep: React.FC<AInstDataStepProps> = ({ data, updateData, validat
       <Accordion 
         expanded={expandedSections.includes('reporting')} 
         onChange={() => handleSectionToggle('reporting')}
+        sx={{ borderLeft: 4, borderColor: 'primary.main', bgcolor: 'background.paper' }}
       >
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant="h6">1. Izvještajni period</Typography>
-          <Chip 
-            label={`${currentValidation?.sections?.find(s => s.section === 'Reporting Period')?.percentage?.toFixed(0) ?? 0}%`}
-            color={currentValidation?.sections?.find(s => s.section === 'Reporting Period')?.percentage === 100 ? 'success' : 'default'}
-            size="small"
-            sx={{ ml: 2 }}
-          />
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, width: '100%', justifyContent: 'space-between' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+              <Typography variant="h6">1. Izvještajni period</Typography>
+              <Chip 
+                label={`${currentValidation?.sections?.find(s => s.section === 'Reporting Period')?.percentage?.toFixed(0) ?? 0}%`}
+                color={currentValidation?.sections?.find(s => s.section === 'Reporting Period')?.percentage === 100 ? 'success' : 'default'}
+                size="small"
+              />
+            </Box>
+            <Chip 
+              icon={<DateRangeIcon />} 
+              label={periodSummary} 
+              variant="outlined" 
+              size="small" 
+            />
+          </Box>
         </AccordionSummary>
         <AccordionDetails>
           <Grid container spacing={3}>
@@ -641,8 +618,13 @@ const AInstDataStep: React.FC<AInstDataStepProps> = ({ data, updateData, validat
                 type="email"
                 label="Email adresa"
                 value={data.authorizedRepresentative.email}
-                onChange={(e) => handleAuthorizedRepresentativeChange('email', e.target.value)}
-                helperText="Email ovlaštene osobe"
+                onChange={(e) => {
+                  const v = e.target.value;
+                  const ok = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+                  handleAuthorizedRepresentativeChange('email', v);
+                }}
+                error={Boolean(data.authorizedRepresentative.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.authorizedRepresentative.email)}
+                helperText={Boolean(data.authorizedRepresentative.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.authorizedRepresentative.email) ? 'Unesite ispravnu email adresu' : 'Email ovlaštene osobe'}
               />
             </Grid>
             <Grid item xs={12} sm={4}>
@@ -783,7 +765,12 @@ const AInstDataStep: React.FC<AInstDataStepProps> = ({ data, updateData, validat
                     type="email"
                     label="Email verifikatora"
                     value={data.verifierInformation.email}
-                    onChange={(e) => handleVerifierInformationChange('email', e.target.value)}
+                    onChange={(e) => {
+                      const v = e.target.value;
+                      handleVerifierInformationChange('email', v);
+                    }}
+                    error={Boolean(data.verifierInformation.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.verifierInformation.email || '')}
+                    helperText={Boolean(data.verifierInformation.email) && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.verifierInformation.email || '') ? 'Unesite ispravnu email adresu' : ''}
                   />
                 </Grid>
                 <Grid item xs={12} sm={6}>
@@ -1111,139 +1098,7 @@ const AInstDataStep: React.FC<AInstDataStepProps> = ({ data, updateData, validat
         </AccordionDetails>
       </Accordion>
 
-      {/* Section 7: Purchased Precursors */}
-      <Accordion>
-        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-          <Typography variant="h6">7. Kupljeni prekursori</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Box sx={{ mb: 2 }}>
-            <Typography variant="body2" color="text.secondary" paragraph>
-              Popis svih prekursora koji se proizvode IZVAN instalacije (npr. kupljeni) i troše se unutar instalacije.
-            </Typography>
-          </Box>
-          
-          {data.purchasedPrecursors.map((precursor, precursorIndex) => (
-            <Paper key={precursor.id} sx={{ p: 2, mb: 2 }}>
-              <Grid container spacing={2}>
-                <Grid item xs={12} sm={3}>
-                  <TextField
-                    fullWidth
-                    label="ID prekursora"
-                    value={precursor.id}
-                    disabled
-                    helperText="Automatski"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={9}>
-                  <TextField
-                    fullWidth
-                    label="Naziv prekursora"
-                    value={precursor.name}
-                    onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'name', e.target.value)}
-                    helperText="Npr. Željezna ruda, Koks, Kalcinirana soda"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <CNCodeAutocomplete
-                    value={precursor.cnCode || ''}
-                    onChange={(value) => updatePurchasedPrecursor(precursorIndex, 'cnCode', value)}
-                    label="CN kod prekursora"
-                    helperText="8-znamenkasti CN kod"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    fullWidth
-                    label="Zemlja proizvodnje"
-                    value={precursor.productionCountry || ''}
-                    onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'productionCountry', e.target.value)}
-                    helperText="Zemlja u kojoj je prekursor proizveden"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    fullWidth
-                    type="number"
-                    label="Ukupna potrošena količina"
-                    value={precursor.totalAmountConsumed}
-                    onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'totalAmountConsumed', parseFloat(e.target.value) || 0)}
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    fullWidth
-                    label="Jedinica količine"
-                    value={precursor.unit}
-                    onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'unit', e.target.value)}
-                    helperText="Npr. tona, m3, komada"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    fullWidth
-                    type="number"
-                    label="Specifične direktne ugrađene emisije"
-                    value={precursor.specificDirectEmbeddedEmissions}
-                    onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'specificDirectEmbeddedEmissions', parseFloat(e.target.value) || 0)}
-                    helperText="t CO2e po jedinici proizvoda"
-                  />
-                </Grid>
-                <Grid item xs={12} sm={6}>
-                  <TextField
-                    fullWidth
-                    label="Jedinica emisija"
-                    value={precursor.directEmissionsUnit}
-                    onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'directEmissionsUnit', e.target.value)}
-                    helperText="Npr. t CO2e/t"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <TextField
-                    fullWidth
-                    label="Izvor podataka o emisijama"
-                    value={precursor.directEmissionsDataSource}
-                    onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'directEmissionsDataSource', e.target.value)}
-                    helperText="Npr. Druge CBAM komunikacije, Vlastita analiza, Zadane vrijednosti"
-                  />
-                </Grid>
-                <Grid item xs={12}>
-                  <FormControlLabel
-                    control={
-                      <Checkbox
-                        checked={precursor.usesDefaultValues}
-                        onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'usesDefaultValues', e.target.checked)}
-                      />
-                    }
-                    label="Koriste se zadane vrijednosti"
-                  />
-                </Grid>
-                {precursor.usesDefaultValues && (
-                  <Grid item xs={12}>
-                    <TextField
-                      fullWidth
-                      multiline
-                      rows={2}
-                      label="Obrazloženje korištenja zadanih vrijednosti"
-                      value={precursor.defaultJustification || ''}
-                      onChange={(e) => updatePurchasedPrecursor(precursorIndex, 'defaultJustification', e.target.value)}
-                      helperText="Obrazložite zašto se koriste zadane vrijednosti"
-                    />
-                  </Grid>
-                )}
-              </Grid>
-            </Paper>
-          ))}
-          
-          <Button
-            variant="outlined"
-            startIcon={<AddIcon />}
-            onClick={addPurchasedPrecursor}
-          >
-            Dodaj kupljeni prekursor
-          </Button>
-        </AccordionDetails>
-      </Accordion>
+      
     </Box>
   );
 };

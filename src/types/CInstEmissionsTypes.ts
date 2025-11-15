@@ -82,6 +82,9 @@ export interface CInstEmissionsData {
   
   // GHG emissions balance data
   emissionsBalance: GHGEmissionsBalance;
+
+  // Measurement-based sources (c) from B_EmInst
+  measurementSources?: MeasurementBasedSource[];
   
   // Data quality information
   dataQuality: DataQualityInfo;
@@ -104,6 +107,21 @@ export interface CInstEmissionsData {
   };
 }
 
+export interface MeasurementBasedSource {
+  id: string;
+  rowNumber?: number;
+  name: string;
+  ghgType: 'CO2' | 'N2O' | 'CH4' | 'Other';
+  activityData: number;
+  activityDataUnit: string;
+  netCalorificValue?: number;
+  measurementMethod?: string;
+  dataSource?: string;
+  dataQuality?: string;
+  notes?: string;
+  isValid?: boolean;
+}
+
 // Constants for default values
 export const C_INST_EMISSIONS_DEFAULTS: CInstEmissionsData = {
   fuelBalance: {
@@ -123,6 +141,7 @@ export const C_INST_EMISSIONS_DEFAULTS: CInstEmissionsData = {
     totalEmissions: 0,
     manualEntries: {}
   },
+  measurementSources: [],
   dataQuality: {
     generalDataQuality: 'Actual data',
     defaultValuesJustification: 'No data available',

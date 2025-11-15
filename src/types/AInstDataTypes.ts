@@ -339,8 +339,8 @@ export const DEFAULT_AINST_DATA: AInstData = {
   reportingPeriod: {
     startDate: '',
     endDate: '',
-    isFullCalendarYear: true,
-    reportingYear: new Date().getFullYear(),
+    isFullCalendarYear: false,
+    reportingYear: 0,
     notes: ''
   },
   installationIdentification: {

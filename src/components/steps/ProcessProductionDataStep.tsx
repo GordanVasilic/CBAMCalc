@@ -1829,7 +1829,7 @@ const ProcessProductionDataStep: React.FC<ProcessProductionDataStepProps> = ({ d
             <Grid item xs={12} sm={6}>
               <FormControl fullWidth>
                 <InputLabel id="processType-label">Process Type</InputLabel>
-                <Tooltip title="The type of production process as defined by CBAM regulations. Different process types have different emission factor ranges and calculation methods.">
+                <Tooltip title="Tip proizvodnog procesa prema CBAM pravilima; različiti tipovi imaju različite rasponе faktora emisije i metodologije proračuna.">
                   <Select
                     labelId="processType-label"
                     id="processType"
@@ -1885,7 +1885,7 @@ const ProcessProductionDataStep: React.FC<ProcessProductionDataStepProps> = ({ d
             </Grid>
             
             <Grid item xs={12} sm={6}>
-              <Tooltip title="The amount of CO2 emissions directly released during production per unit of output. This is a key parameter for CBAM calculations and must be based on verified data or approved methodologies.">
+              <Tooltip title="Količina direktno emitovanog CO2 po jedinici proizvodnje; ključni parametar za CBAM izračun, zasnovan na verifikovanim podacima ili odobrenim metodama.">
                 <TextField
                   id="processEmissionFactor"
                   label="Process Emission Factor (t/unit)"
@@ -1998,7 +1998,7 @@ const ProcessProductionDataStep: React.FC<ProcessProductionDataStepProps> = ({ d
             </Grid>
             
             <Grid item xs={12}>
-              <Tooltip title="The amount of CO2 emissions embedded in the input material per unit. This includes emissions from previous production stages and is crucial for accurate CBAM reporting.">
+              <Tooltip title="Količina ugrađenih (embedded) CO2 emisija u ulaznom materijalu po jedinici; uključuje emisije iz prethodnih faza proizvodnje i ključna je za tačno CBAM izvještavanje.">
                 <TextField
                   id="embeddedEmissions"
                   label="Embedded Emissions (t/unit)"
@@ -2047,7 +2047,7 @@ const ProcessProductionDataStep: React.FC<ProcessProductionDataStepProps> = ({ d
             </Grid>
             
             <Grid item xs={12} sm={6}>
-              <Tooltip title="The EU Combined Nomenclature (CN) code identifies the product type for CBAM reporting. This 8-digit code determines the applicable CBAM regulations for the product.">
+              <Tooltip title="EU Kombinovana nomenklatura (CN) kod identifikuje tip proizvoda za CBAM izvještavanje; 8‑cifreni kod određuje primjenjiva CBAM pravila za proizvod.">
                 <CNCodeAutocomplete
                   value={outputFormData.cnCode || ''}
                   onChange={(newCode) => setOutputFormData(prev => ({ ...prev, cnCode: newCode }))}

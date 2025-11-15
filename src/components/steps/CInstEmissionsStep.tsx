@@ -17,14 +17,20 @@ import {
   AccordionDetails,
   Switch,
   FormControlLabel,
-  Divider
+  Divider,
+  Table,
+  TableHead,
+  TableRow,
+  TableCell,
+  TableBody
 } from '@mui/material';
 import { Tooltip } from '@mui/material';
 import {
   ExpandMore as ExpandMoreIcon,
   Calculate as CalculateIcon,
   Warning as WarningIcon,
-  CheckCircle as CheckCircleIcon
+  CheckCircle as CheckCircleIcon,
+  InfoOutlined as InfoIcon
 } from '@mui/icons-material';
 
 import {
@@ -378,6 +384,9 @@ const CInstEmissionsStep: React.FC<CInstEmissionsStepProps> = ({ data, onUpdate 
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <CalculateIcon color="primary" />
             <Typography variant="h6">Bilans goriva (TJ)</Typography>
+            <Tooltip title="Formula: Ukupan unos goriva = Direktno gorivo za CBAM + Gorivo za električnu energiju + Direktno gorivo za ne‑CBAM proizvode">
+              <InfoIcon fontSize="small" sx={{ color: 'text.secondary' }} />
+            </Tooltip>
             
           </Box>
         </AccordionSummary>
@@ -434,6 +443,9 @@ const CInstEmissionsStep: React.FC<CInstEmissionsStepProps> = ({ data, onUpdate 
           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
             <CalculateIcon color="primary" />
             <Typography variant="h6">Bilans GHG emisija (tCO2e)</Typography>
+            <Tooltip title="Formule: Direktne emisije = CO2 + N2O + PFC; Ukupne emisije = Direktne + Indirektne">
+              <InfoIcon fontSize="small" sx={{ color: 'text.secondary' }} />
+            </Tooltip>
           </Box>
         </AccordionSummary>
         <AccordionDetails>
@@ -513,6 +525,59 @@ const CInstEmissionsStep: React.FC<CInstEmissionsStepProps> = ({ data, onUpdate 
               />
             </Grid>
           </Grid>
+        </AccordionDetails>
+      </Accordion>
+
+      {/* Measurement-based sources (section c) - read-only summary */}
+      <Accordion sx={{ mb: 2 }}>
+        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Typography variant="h6">Mjereni izvori (sekcija c, pregled)</Typography>
+          </Box>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Table size="small">
+            <TableHead>
+              <TableRow>
+                <TableCell>#</TableCell>
+                <TableCell>Naziv</TableCell>
+                <TableCell>Tip GHG</TableCell>
+                <TableCell>AD</TableCell>
+                <TableCell>Jedinica AD</TableCell>
+                <TableCell>NCV</TableCell>
+                <TableCell>Metoda mjerenja</TableCell>
+                <TableCell>Izvor podataka</TableCell>
+                <TableCell>Kvalitet podataka</TableCell>
+                <TableCell>Napomene</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {(localData.measurementSources || []).length === 0 ? (
+                <TableRow>
+                  <TableCell colSpan={10}>
+                    <Typography variant="caption" color="text.secondary">
+                      Nema mjerenih izvora. Dodavanje i uređivanje je u koraku B_EmInst.
+                    </Typography>
+                  </TableCell>
+                </TableRow>
+              ) : (
+                (localData.measurementSources || []).map((m, idx) => (
+                  <TableRow key={m.id || idx}>
+                    <TableCell>{m.rowNumber ?? idx + 1}</TableCell>
+                    <TableCell>{m.name || ''}</TableCell>
+                    <TableCell>{m.ghgType || ''}</TableCell>
+                    <TableCell>{m.activityData ?? ''}</TableCell>
+                    <TableCell>{m.activityDataUnit || ''}</TableCell>
+                    <TableCell>{m.netCalorificValue ?? ''}</TableCell>
+                    <TableCell>{m.measurementMethod || ''}</TableCell>
+                    <TableCell>{m.dataSource || ''}</TableCell>
+                    <TableCell>{m.dataQuality || ''}</TableCell>
+                    <TableCell>{m.notes || ''}</TableCell>
+                  </TableRow>
+                ))
+              )}
+            </TableBody>
+          </Table>
         </AccordionDetails>
       </Accordion>
 

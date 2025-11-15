@@ -41,6 +41,11 @@ const sr: Record<string, string> = {
   'validation.lowRenewable.text': 'Udeo obnovljive energije je ispod 20%. Povećanje obnovljive energije može smanjiti emisije.',
   'validation.ready.title': 'Spremno za izvoz',
   'validation.ready.text': 'Rezultati su spremni za izvoz. Izaberite format iznad.'
+  , 'help.title': 'Pomoć & Referenca'
+  , 'help.tabs.versions': '0_Versije'
+  , 'help.tabs.contents': 'a_Sadržaj'
+  , 'help.tabs.guidelines': 'b_Smjernice i uslovi'
+  , 'help.tabs.codelists': 'c_Listinzi kodova'
 }
 
 export function t(key: string, params?: TranslationParams): string {

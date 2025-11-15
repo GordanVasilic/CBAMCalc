@@ -10,6 +10,11 @@ import {
   BEMINST_CONSTANTS 
 } from '../types/BEmInstTypes';
 
+const PFC_TECH_DEFAULTS: Record<string, { sefCF4: number; fc2f6: number }> = {
+  'Centre Worked Pre-Bake (CWPB)': { sefCF4: 0.143, fc2f6: 0.121 },
+  'Vertical Stud Søderberg (VSS)': { sefCF4: 0.092, fc2f6: 0.053 }
+};
+
 /**
  * Calculate emissions for a single emission source stream
  * Based on Excel formulas from B_EmInst sheet
@@ -57,15 +62,14 @@ function calculateCombustionEmissions(source: EmissionSourceStream): void {
     throw new Error('Missing required parameters for combustion calculation');
   }
 
-  const oxidationFactor = source.oxidationFactor || BEMINST_CONSTANTS.DEFAULT_OXIDATION_FACTOR;
-  const conversionFactor = source.conversionFactor || BEMINST_CONSTANTS.DEFAULT_CONVERSION_FACTOR;
+  const oxidationFactor = source.oxidationFactor ?? BEMINST_CONSTANTS.DEFAULT_OXIDATION_FACTOR;
+  const conversionFactor = source.conversionFactor ?? BEMINST_CONSTANTS.DEFAULT_CONVERSION_FACTOR;
 
   // Calculate total CO2 emissions
-  const totalEmissions = source.activityData * 
-                        (source.netCalorificValue / 1000) * // Convert to TJ if needed
-                        (source.emissionFactor / 1000) * // Convert to tCO2/TJ
-                        (oxidationFactor / 100) * // Convert percentage
-                        (conversionFactor / 100); // Convert percentage
+  const ncvTJPerTon = normalizeNCVToTJPerTon(source.netCalorificValue, source.netCalorificValueUnit);
+  const efTCO2PerTJ = normalizeEFToTCO2PerTJ(source.emissionFactor, source.emissionFactorUnit);
+  const energyTJ = source.activityData * ncvTJPerTon;
+  const totalEmissions = energyTJ * efTCO2PerTJ * (oxidationFactor / 100) * (conversionFactor / 100);
 
   // Split into fossil and biomass components
   const biomassFraction = (source.biomassContent || 0) / 100;
@@ -145,13 +149,40 @@ function calculatePFCEmissions(source: EmissionSourceStream): void {
  */
 function calculateEnergyContent(source: EmissionSourceStream): void {
   if (source.method === 'Combustion' && source.netCalorificValue && source.activityData) {
-    const totalEnergy = source.activityData * (source.netCalorificValue / 1000); // Convert to TJ
+    const ncvTJPerTon = normalizeNCVToTJPerTon(source.netCalorificValue, source.netCalorificValueUnit);
+    const totalEnergy = source.activityData * ncvTJPerTon;
     
     const biomassFraction = (source.biomassContent || 0) / 100;
     source.energyContentFossil = totalEnergy * (1 - biomassFraction);
     source.energyContentBiomass = totalEnergy * biomassFraction;
     source.energyContentFossilUnit = 'TJ';
     source.energyContentBiomassUnit = 'TJ';
+  }
+}
+
+function normalizeNCVToTJPerTon(ncv: number, unit?: string): number {
+  if (!ncv) return 0;
+  switch (unit) {
+    case 'TJ/t':
+      return ncv;
+    case 'GJ/t':
+      return ncv / 1000;
+    case 'MJ/kg':
+      return ncv / 1000; // MJ/kg → TJ/t (see derivation)
+    default:
+      return ncv / 1000; // assume GJ/t
+  }
+}
+
+function normalizeEFToTCO2PerTJ(ef: number, unit?: string): number {
+  if (!ef) return 0;
+  switch (unit) {
+    case 'tCO2/TJ':
+      return ef;
+    case 'kgCO2/GJ':
+      return ef; // kg/GJ → t/TJ has numeric equivalence
+    default:
+      return ef; // assume already tCO2/TJ
   }
 }
 
@@ -162,14 +193,29 @@ export function calculatePFCSourceStream(pfc: PFCSourceStream): PFCSourceStream 
   const calculated = { ...pfc };
 
   try {
-    // Calculate CF4 emissions: CF4 = Frequency × Duration × SEF(CF4) × AD
-    calculated.cf4EmissionsTons = calculated.frequency * 
-                                  calculated.duration * 
-                                  calculated.sefCF4 * 
-                                  (calculated.activityData / 1000); // Convert to thousands of tons
-
-    // Calculate C2F6 emissions: C2F6 = F(C2F6) × CF4
-    calculated.c2f6EmissionsTons = calculated.c2f6Factor * calculated.cf4EmissionsTons;
+    const productionTons = calculated.activityData || 0;
+    if (calculated.method === 'Slope method') {
+      const aem = (calculated.frequency || 0) * (calculated.duration || 0); // AE-mins/cell-day
+      let sefKgPerTonPerAEM = calculated.sefCF4 || 0;
+      if (!sefKgPerTonPerAEM && calculated.technologyType && PFC_TECH_DEFAULTS[calculated.technologyType]) {
+        sefKgPerTonPerAEM = PFC_TECH_DEFAULTS[calculated.technologyType].sefCF4;
+      }
+      calculated.cf4EmissionsTons = aem * (sefKgPerTonPerAEM / 1000) * productionTons;
+      let fc2f6 = calculated.c2f6Factor || 0;
+      if (!fc2f6 && calculated.technologyType && PFC_TECH_DEFAULTS[calculated.technologyType]) {
+        fc2f6 = PFC_TECH_DEFAULTS[calculated.technologyType].fc2f6;
+      }
+      calculated.c2f6EmissionsTons = fc2f6 * calculated.cf4EmissionsTons;
+    } else {
+      // Overvoltage method: CF4 [t] = OVC × (AEo/CE) × PrAl × 0.001
+      const ovc = calculated.ovc || 0; // kg CF4 / t Al / mV
+      const aeo = calculated.aeo || 0; // mV
+      let ce = calculated.ce || 0; // % or fraction
+      if (ce > 1) ce = ce / 100;
+      const cf4Tons = ovc * (ce > 0 ? (aeo / ce) : 0) * productionTons * 0.001;
+      calculated.cf4EmissionsTons = cf4Tons;
+      calculated.c2f6EmissionsTons = (calculated.c2f6Factor || 0) * cf4Tons;
+    }
 
     // Calculate CO2 equivalent emissions
     calculated.cf4EmissionsCO2e = calculated.cf4EmissionsTons * BEMINST_CONSTANTS.GWP_CF4;
@@ -259,8 +305,23 @@ export function validatePFCSourceStream(pfc: PFCSourceStream): boolean {
   }
 
   // Validate calculation parameters
-  if (pfc.frequency <= 0 || pfc.duration <= 0 || pfc.sefCF4 < 0) {
-    errors.push('PFC calculation parameters must be positive');
+  if (pfc.method === 'Slope method') {
+    if ((pfc.frequency || 0) <= 0 || (pfc.duration || 0) <= 0) {
+      errors.push('Frequency and duration must be positive for slope method');
+    }
+    if (pfc.sefCF4 === undefined) {
+      errors.push('Slope emission factor (SEF CF4) is required for slope method');
+    }
+  } else {
+    if (pfc.ovc === undefined) {
+      errors.push('Overvoltage coefficient (OVC) is required for overvoltage method');
+    }
+    if ((pfc.aeo || 0) <= 0) {
+      errors.push('Anode effect overvoltage (AEo) must be positive');
+    }
+    if ((pfc.ce || 0) <= 0) {
+      errors.push('Current efficiency (CE) must be positive');
+    }
   }
 
   pfc.validationErrors = errors;
@@ -323,10 +384,11 @@ export function calculateBEmInstData(data: BEmInstData): BEmInstData {
       ...data.pfcEmissions.flatMap(p => p.validationErrors || [])
     ];
     
+    const warnings = collectWarnings(data);
     data.validationStatus = {
       isValid: allErrors.length === 0,
       errors: allErrors,
-      warnings: [], // TODO: Add warning logic
+      warnings,
       completenessScore: calculateCompletenessScore(data)
     };
     
@@ -378,4 +440,29 @@ function calculateCompletenessScore(data: BEmInstData): number {
   });
 
   return totalFields > 0 ? (completedFields / totalFields) * 100 : 0;
+}
+
+function collectWarnings(data: BEmInstData): string[] {
+  const warnings: string[] = [];
+  data.emissionSources.forEach((s, idx) => {
+    if (s.method === 'Combustion') {
+      if (s.netCalorificValueUnit !== 'TJ/t' && s.netCalorificValueUnit !== 'GJ/t' && s.netCalorificValueUnit !== 'MJ/kg') {
+        warnings.push(`NCV unit not recognized for row ${s.rowNumber || idx}`);
+      }
+      if (!s.oxidationFactor && s.oxidationFactor !== 0) {
+        warnings.push(`Oxidation factor missing for row ${s.rowNumber || idx}`);
+      }
+    }
+    if (s.method === 'Process Emissions' && (s.biomassContent === undefined)) {
+      warnings.push(`Biomass % not set for row ${s.rowNumber || idx}`);
+    }
+    if (s.method === 'Mass balance' && (s.carbonContent === undefined)) {
+      warnings.push(`Carbon content missing for row ${s.rowNumber || idx}`);
+    }
+  });
+  data.pfcEmissions.forEach((p, idx) => {
+    if (!p.duration || p.duration <= 0) warnings.push(`PFC duration missing/invalid for row ${p.rowNumber || idx}`);
+    if (p.c2f6Factor === undefined) warnings.push(`PFC C2F6 factor not set for row ${p.rowNumber || idx}`);
+  });
+  return warnings;
 }

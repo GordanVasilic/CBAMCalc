@@ -75,6 +75,36 @@ const StepNavigationHeader: React.FC<StepNavigationHeaderProps> = ({
   };
 
   const validationSummary = getValidationSummary();
+  const maxTooltipItems = 5;
+  const errorItems = (validationStatus.errors || []).slice(0, maxTooltipItems);
+  const remainingSlots = Math.max(0, maxTooltipItems - errorItems.length);
+  const warningItems = (validationStatus.warnings || []).slice(0, remainingSlots);
+  const shownCount = errorItems.length + warningItems.length;
+  const totalIssues = (validationStatus.errors || []).length + (validationStatus.warnings || []).length;
+  const remainingCount = Math.max(0, totalIssues - shownCount);
+  const tooltipTitle = (
+    <Box sx={{ maxWidth: 360 }}>
+      {errorItems.length > 0 && (
+        <Box sx={{ mb: 0.5 }}>
+          <Typography variant="caption" sx={{ fontWeight: 600 }}>Greške</Typography>
+          {errorItems.map((msg, i) => (
+            <Typography key={`err-${i}`} variant="caption" display="block">{msg}</Typography>
+          ))}
+        </Box>
+      )}
+      {warningItems.length > 0 && (
+        <Box>
+          <Typography variant="caption" sx={{ fontWeight: 600 }}>Upozorenja</Typography>
+          {warningItems.map((msg, i) => (
+            <Typography key={`warn-${i}`} variant="caption" display="block">{msg}</Typography>
+          ))}
+        </Box>
+      )}
+      {remainingCount > 0 && (
+        <Typography variant="caption" display="block">{`+ još ${remainingCount}…`}</Typography>
+      )}
+    </Box>
+  );
 
   return (
     <>
@@ -134,7 +164,7 @@ const StepNavigationHeader: React.FC<StepNavigationHeaderProps> = ({
               </Box>
             </Tooltip>
 
-            <Tooltip title={validationSummary.text}>
+            <Tooltip title={totalIssues > 0 ? tooltipTitle : validationSummary.text}>
               <Chip
                 icon={validationSummary.icon}
                 label={validationSummary.text}

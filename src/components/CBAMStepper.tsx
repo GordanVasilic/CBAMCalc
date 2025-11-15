@@ -29,8 +29,7 @@ const stepGroups: StepGroup[] = [
     description: 'Opći podaci o kompaniji i instalaciji',
     steps: [
       { id: 0, label: 'Podaci o kompaniji', shortLabel: 'Kompanija', description: 'Osnovni podaci o kompaniji' },
-      { id: 1, label: 'Konfiguracija izvještaja', shortLabel: 'Izvještaj', description: 'Postavke izvještajnog razdoblja' },
-      { id: 2, label: 'Detalji o instalaciji', shortLabel: 'Instalacija', description: 'Tehnički detalji instalacije' }
+      
     ]
   },
   {
@@ -38,7 +37,7 @@ const stepGroups: StepGroup[] = [
     title: 'Instalacijski podaci',
     description: 'Detaljni podaci o instalaciji iz predloška',
     steps: [
-      { id: 3, label: 'A_InstData - Podaci o instalaciji', shortLabel: 'A_InstData', description: 'Detaljni podaci o instalaciji' }
+      { id: 1, label: 'Podaci o instalaciji', shortLabel: 'Podaci o instalaciji', description: 'Detaljni podaci o instalaciji' }
     ]
   },
   {
@@ -46,8 +45,10 @@ const stepGroups: StepGroup[] = [
     title: 'Procesi proizvodnje',
     description: 'Proizvodni procesi i emisije',
     steps: [
-      { id: 4, label: 'D_Processes - Procesi proizvodnje', shortLabel: 'D_Processes', description: 'Procesi proizvodnje i matrice' },
-      { id: 5, label: 'B_EmInst - Izvori emisija', shortLabel: 'B_EmInst', description: 'Izvori emisija po instalacijama' }
+      { id: 2, label: 'Izvori emisija', shortLabel: 'Izvori emisija', description: 'Izvori emisija po instalacijama' },
+      { id: 3, label: 'Bilans emisija', shortLabel: 'Bilans emisija', description: 'Sažetak emisija i bilans goriva (C)' },
+      { id: 4, label: 'Energija i gorivo', shortLabel: 'Energija', description: 'Podaci o energiji i gorivu' },
+      { id: 5, label: 'Proizvodnja', shortLabel: 'Proizvodnja', description: 'Detaljni procesi (D) i sažetak' }
     ]
   },
   {
@@ -55,9 +56,7 @@ const stepGroups: StepGroup[] = [
     title: 'Energetski i proizvodni podaci',
     description: 'Podaci o energiji, gorivu i proizvodnji',
     steps: [
-      { id: 6, label: 'Energija i gorivo', shortLabel: 'Energija', description: 'Podaci o energiji i gorivu' },
-      { id: 7, label: 'Proces i proizvodnja', shortLabel: 'Proizvodnja', description: 'Podaci o procesima i proizvodnji' },
-      { id: 8, label: 'Nabavljeni prekursori', shortLabel: 'Prekursori', description: 'Podaci o nabavljenim prekursorima' }
+      { id: 6, label: 'Kupljeni prekursori', shortLabel: 'Prekursori', description: 'Kupljeni prekursori (E)' }
     ]
   },
   {
@@ -65,7 +64,7 @@ const stepGroups: StepGroup[] = [
     title: 'Rezultati i izvoz',
     description: 'Pregled rezultata i izvoz podataka',
     steps: [
-      { id: 9, label: 'Pregled i izvoz', shortLabel: 'Rezultati', description: 'Pregled rezultata i izvoz formata' }
+      { id: 7, label: 'Pregled i izvoz', shortLabel: 'Rezultati', description: 'Pregled rezultata i izvoz formata' }
     ]
   }
 ];
@@ -113,7 +112,23 @@ const CBAMStepper: React.FC<CBAMStepperProps> = ({
             <Step key={step.id}>
               <StepLabel 
                 onClick={() => onStepClick?.(step.id)}
-                sx={{ cursor: onStepClick ? 'pointer' : 'default' }}
+                sx={{ 
+                  cursor: onStepClick ? 'pointer' : 'default',
+                  '&:hover': { color: 'primary.main', textDecoration: 'underline' },
+                  '& .MuiStepLabel-iconContainer': {
+                    cursor: onStepClick ? 'pointer' : 'default',
+                    borderRadius: '50%',
+                    transition: 'all 0.2s ease'
+                  },
+                  '& .MuiStepLabel-iconContainer:hover svg': {
+                    transform: 'scale(1.2)',
+                    color: 'primary.main',
+                    filter: 'drop-shadow(0 0 6px rgba(25,118,210,0.5))'
+                  },
+                  '& .MuiStepLabel-iconContainer svg': {
+                    transition: 'transform 0.2s ease'
+                  }
+                }}
               >
                 <Typography variant="caption" sx={{ fontSize: '0.7rem' }}>
                   {step.shortLabel}
@@ -199,11 +214,12 @@ const CBAMStepper: React.FC<CBAMStepperProps> = ({
                         border: 1,
                         borderColor: status === 'active' ? 'primary.main' : 'divider',
                         '&:hover': isClickable ? { bgcolor: 'action.hover' } : {},
+                        '&:hover .step-icon': { transform: 'scale(1.1)' },
                         transition: 'all 0.2s ease-in-out'
                       }}
                       onClick={() => isClickable && onStepClick?.(step.id)}
                     >
-                      <Box sx={{ mr: 2, display: 'flex', alignItems: 'center' }}>
+                      <Box sx={{ mr: 2, display: 'flex', alignItems: 'center', transition: 'transform 0.15s ease' }} className="step-icon">
                         {getStatusIcon(status)}
                       </Box>
                       <Box sx={{ flex: 1 }}>

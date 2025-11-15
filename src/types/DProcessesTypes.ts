@@ -60,6 +60,8 @@ export interface DirectEmissions {
   unit: 'tCO2e';
   calculationMethod: string;
   dataSource: string;
+  measurementMethod?: string;
+  measurementFrequency?: string;
 }
 
 export interface MeasurableHeatData {
@@ -70,6 +72,7 @@ export interface MeasurableHeatData {
   emissionFactorUnit: 'tCO2/TJ';
   imported: number;
   exported: number;
+  shareToCBAMGoods?: number;
 }
 
 export interface WasteGasData {
@@ -80,14 +83,15 @@ export interface WasteGasData {
   emissionFactorUnit: 'tCO2/TJ';
   imported: number;
   exported: number;
+  reusedShare?: number;
 }
 
 export interface IndirectEmissionsData {
   applicable: boolean;
   electricityConsumption: number;
-  electricityUnit: 'MWh';
+  electricityUnit: 'MWh' | 'kWh' | 'GJ';
   emissionFactor: number;
-  emissionFactorUnit: 'tCO2/MWh';
+  emissionFactorUnit: 'tCO2/MWh' | 'tCO2/kWh' | 'tCO2/GJ';
   emissionFactorSource: string;
   emissionFactorMethod: string;
 }
@@ -95,9 +99,9 @@ export interface IndirectEmissionsData {
 export interface ElectricityExportData {
   applicable: boolean;
   exportedAmount: number;
-  unit: 'MWh';
+  unit: 'MWh' | 'kWh' | 'GJ';
   emissionFactor: number;
-  emissionFactorUnit: 'tCO2/MWh';
+  emissionFactorUnit: 'tCO2/MWh' | 'tCO2/kWh' | 'tCO2/GJ';
 }
 
 // Input/Output Matrix Structure
@@ -306,7 +310,9 @@ export const DEFAULT_PRODUCTION_PROCESS: ProductionProcess = {
     amount: 0,
     unit: 'tCO2e',
     calculationMethod: '',
-    dataSource: ''
+    dataSource: '',
+    measurementMethod: '',
+    measurementFrequency: ''
   },
   measurableHeat: {
     applicable: false,

@@ -177,6 +177,13 @@ export const calculateTotalDirectCO2Emissions = (
   energyFuelData: CBAMData['energyFuelData'],
   emissionFactors: EmissionFactor[] = []
 ): number => {
+  const toMWh = (val: number, unit?: string) => {
+    const u = String(unit || '').toLowerCase();
+    if (u === 'kwh') return (val || 0) / 1000;
+    if (u === 'gj') return (val || 0) * DEFAULT_CONSTANTS.GJ_to_MWh;
+    if (u === 'tj') return (val || 0) * DEFAULT_CONSTANTS.GJ_to_MWh * 1000;
+    return val || 0;
+  };
   return energyFuelData.reduce((total, fuel) => {
     // First check for a custom emission factor
     let emissionFactor = fuel.co2EmissionFactor;
@@ -196,8 +203,8 @@ export const calculateTotalDirectCO2Emissions = (
       emissionFactor = DEFAULT_FUEL_EMISSION_FACTORS[fuel.fuelType] || 0;
     }
     
-    // Calculate emissions (consumption * emission factor)
-    const emissions = fuel.consumption * emissionFactor;
+    const consMWh = toMWh(fuel.consumption, fuel.unit);
+    const emissions = consMWh * (emissionFactor || 0);
     
     return total + emissions;
   }, 0);
@@ -426,12 +433,14 @@ export const calculateSpecificEmissions = (totalEmissions: number, totalProducti
  * @returns Total energy consumption in MWh
  */
 export const calculateTotalEnergy = (energyFuelData: CBAMData['energyFuelData']): number => {
-  return energyFuelData.reduce((total, fuel) => {
-    // For electricity and heat, consumption is already in MWh
-    // For fuels, we need to convert to MWh using calorific values
-    // For simplicity, we assume all consumption values are in MWh
-    return total + fuel.consumption;
-  }, 0);
+  const toMWh = (val: number, unit?: string) => {
+    const u = String(unit || '').toLowerCase();
+    if (u === 'kwh') return (val || 0) / 1000;
+    if (u === 'gj') return (val || 0) * DEFAULT_CONSTANTS.GJ_to_MWh;
+    if (u === 'tj') return (val || 0) * DEFAULT_CONSTANTS.GJ_to_MWh * 1000;
+    return val || 0;
+  };
+  return energyFuelData.reduce((total, fuel) => total + toMWh(fuel.consumption || 0, fuel.unit), 0);
 };
 
 /**

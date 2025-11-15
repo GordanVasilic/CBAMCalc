@@ -31,29 +31,45 @@ export function calculateMeasurableHeatEmissions(heatData: any): number {
   if (!heatData.applicable || heatData.netAmount === 0) {
     return 0;
   }
-  const netHeat = heatData.imported - heatData.exported;
-  return netHeat * heatData.emissionFactor;
+  const netHeat = (Number(heatData.netAmount || 0) + Number(heatData.imported || 0) - Number(heatData.exported || 0));
+  const share = heatData.shareToCBAMGoods !== undefined ? Math.max(0, Math.min(100, Number(heatData.shareToCBAMGoods))) / 100 : 1;
+  return Math.max(0, netHeat) * Number(heatData.emissionFactor || 0) * share;
 }
 
 export function calculateWasteGasEmissions(wasteGasData: any): number {
   if (!wasteGasData.applicable || wasteGasData.amount === 0) {
     return 0;
   }
-  return wasteGasData.amount * wasteGasData.emissionFactor;
+  const netWg = (Number(wasteGasData.amount || 0) + Number(wasteGasData.imported || 0) - Number(wasteGasData.exported || 0));
+  const reused = wasteGasData.reusedShare !== undefined ? Math.max(0, Math.min(100, Number(wasteGasData.reusedShare))) / 100 : 0;
+  const effective = Math.max(0, netWg) * (1 - reused);
+  return effective * Number(wasteGasData.emissionFactor || 0);
 }
 
 export function calculateIndirectEmissions(indirectData: any): number {
   if (!indirectData.applicable || indirectData.electricityConsumption === 0) {
     return 0;
   }
-  return indirectData.electricityConsumption * indirectData.emissionFactor;
+  const cons = Number(indirectData.electricityConsumption || 0);
+  const unit = String(indirectData.electricityUnit || 'MWh');
+  const ef = Number(indirectData.emissionFactor || 0);
+  const efUnit = String(indirectData.emissionFactorUnit || 'tCO2/MWh');
+  const consMWh = unit === 'kWh' ? cons / 1000 : unit === 'GJ' ? cons * 0.2777777778 : cons;
+  const efPerMWh = efUnit === 'tCO2/kWh' ? ef * 1000 : efUnit === 'tCO2/GJ' ? ef * 3.6 : ef;
+  return consMWh * efPerMWh;
 }
 
 export function calculateElectricityExportCredit(exportData: any): number {
   if (!exportData.applicable || exportData.exportedAmount === 0) {
     return 0;
   }
-  return exportData.exportedAmount * exportData.emissionFactor;
+  const amt = Number(exportData.exportedAmount || 0);
+  const unit = String(exportData.unit || 'MWh');
+  const ef = Number(exportData.emissionFactor || 0);
+  const efUnit = String(exportData.emissionFactorUnit || 'tCO2/MWh');
+  const amtMWh = unit === 'kWh' ? amt / 1000 : unit === 'GJ' ? amt * 0.2777777778 : amt;
+  const efPerMWh = efUnit === 'tCO2/kWh' ? ef * 1000 : efUnit === 'tCO2/GJ' ? ef * 3.6 : ef;
+  return amtMWh * efPerMWh;
 }
 
 export function calculateProcessEmissions(process: ProductionProcess): ProcessEmissionResults {

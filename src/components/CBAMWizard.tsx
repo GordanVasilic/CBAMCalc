@@ -2,11 +2,9 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { calculateCBAMEmissions } from '../utils/calculationEngine';
 import { validateCBAMSectionsStatus } from '../utils/dataValidationUtils';
 import { DataValidationStatus } from '../types/CBAMData';
-import { Box, Button, Paper } from '@mui/material';
+import { Box, Button, Paper, Tooltip, Typography } from '@mui/material';
 import StepNavigationHeader from './StepNavigationHeader';
 import CompanyInfoStep from './steps/CompanyInfoStep';
-import ReportConfigStep from './steps/ReportConfigStep';
-import InstallationDetailsStep from './steps/InstallationDetailsStep';
 import AInstDataStep from './steps/AInstDataStep';
 import DProcessesStep from './steps/DProcessesStep';
 import CInstEmissionsStep from './steps/CInstEmissionsStep';
@@ -14,6 +12,7 @@ import EPurchasedStep from './steps/EPurchasedStep';
 import BEmInstStep from './steps/BEmInstStep';
 import EnergyFuelDataStep from './steps/EnergyFuelDataStep';
 import ProcessProductionDataStep from './steps/ProcessProductionDataStep';
+import ProductionStep from './steps/ProductionStep';
 import PurchasedPrecursorsForm from './purchased-precursors/PurchasedPrecursorsForm';
 import ResultsExportStep from './steps/ResultsExportStep';
 import { CBAMData } from '../types/CBAMData';
@@ -26,19 +25,16 @@ import { exportAndDownloadExcel } from '../utils/excelExport';
 import { exportAndDownloadPDF } from '../utils/pdfExport';
 import { exportAndDownloadCSV } from '../utils/csvExport';
 import { printCBAMData } from '../utils/printExport';
+import { validateAInstData } from '../utils/aInstDataCalculationEngine';
 
 const steps = [
   'Podaci o kompaniji',
-  'Konfiguracija izvještaja',
-  'Detalji o instalaciji',
-  'A_InstData - Podaci o instalaciji',
-  'D_Processes - Procesi proizvodnje',
-  'C_InstEmissions - Emisije i energija',
-  'E_Purchased - Kupljeni prekursori',
-  'B_EmInst - Izvori emisija',
+  'Podaci o instalaciji',
+  'Izvori emisija',
+  'Bilans emisija',
   'Energija i gorivo',
-  'Proces i proizvodnja',
-  'Nabavljeni prekursori',
+  'Proizvodnja',
+  'Kupljeni prekursori',
   'Pregled i izvoz'
 ];
 
@@ -143,32 +139,112 @@ const CBAMWizard: React.FC = () => {
     }
   });
 
+  // One-way sync: map flat InstallationDetails into structured A_InstData where empty
+  useEffect(() => {
+    const inst = cbamData.installationDetails || {} as any;
+    const a = cbamData.aInstData || DEFAULT_AINST_DATA;
+    const updated = { ...a } as any;
+
+    // Reporting period
+    if (inst.startDate && !updated.reportingPeriod?.startDate) {
+      updated.reportingPeriod = { ...(updated.reportingPeriod || {}), startDate: inst.startDate };
+    }
+    if (inst.endDate && !updated.reportingPeriod?.endDate) {
+      updated.reportingPeriod = { ...(updated.reportingPeriod || {}), endDate: inst.endDate };
+    }
+
+    // Installation identification
+    const ii = updated.installationIdentification || {};
+    updated.installationIdentification = {
+      ...ii,
+      installationId: ii.installationId || cbamData.reportConfig.installationId || '',
+      installationName: ii.installationName || inst.installationName || '',
+      installationEnglishName: ii.installationEnglishName || inst.installationEnglishName || '',
+      installationType: ii.installationType || inst.installationType || '',
+      mainActivity: ii.mainActivity || inst.mainActivity || '',
+      cnCode: ii.cnCode || inst.cnCode || '',
+      productionCapacity: ii.productionCapacity || inst.productionCapacity || 0,
+      annualProduction: ii.annualProduction || inst.annualProduction || 0,
+      economicActivity: ii.economicActivity || inst.economicActivity || ''
+    };
+
+    // Address
+    const ia = updated.installationAddress || {};
+    updated.installationAddress = {
+      ...ia,
+      streetAndNumber: ia.streetAndNumber || inst.streetAndNumber || '',
+      postalCode: ia.postalCode || inst.postalCode || '',
+      poBox: ia.poBox || inst.poBox || '',
+      city: ia.city || inst.city || '',
+      country: ia.country || inst.country || '',
+      unlocode: ia.unlocode || inst.unlocode || '',
+      latitude: ia.latitude || inst.latitude || 0,
+      longitude: ia.longitude || inst.longitude || 0
+    };
+
+    // Authorized representative
+    const ar = updated.authorizedRepresentative || {};
+    updated.authorizedRepresentative = {
+      ...ar,
+      name: ar.name || inst.authorizedRepresentativeName || '',
+      email: ar.email || inst.authorizedRepresentativeEmail || '',
+      telephone: ar.telephone || inst.authorizedRepresentativeTelephone || ''
+    };
+
+    // Verifier
+    if (cbamData.installationDetails?.verifierCompanyName || cbamData.installationDetails?.verifierName) {
+      const vi = updated.verifierInformation || {};
+      updated.verifierInformation = {
+        ...vi,
+        companyName: vi.companyName || inst.verifierCompanyName || '',
+        streetAndNumber: vi.streetAndNumber || inst.verifierStreetAndNumber || '',
+        city: vi.city || inst.verifierCity || '',
+        postalCode: vi.postalCode || inst.verifierPostalCode || '',
+        country: vi.country || inst.verifierCountry || '',
+        authorizedRepresentative: vi.authorizedRepresentative || inst.verifierAuthorizedRepresentative || '',
+        email: vi.email || inst.verifierEmail || '',
+        telephone: vi.telephone || inst.verifierTelephone || '',
+        fax: vi.fax || inst.verifierFax || '',
+        accreditationMemberState: vi.accreditationMemberState || inst.accreditationMemberState || '',
+        accreditationBodyName: vi.accreditationBodyName || inst.accreditationBodyName || '',
+        accreditationRegistrationNumber: vi.accreditationRegistrationNumber || inst.accreditationRegistrationNumber || '',
+        verificationDate: vi.verificationDate || inst.verificationDate || ''
+      };
+    }
+
+    if (JSON.stringify(a) !== JSON.stringify(updated)) {
+      setCBAMData(prev => ({ ...prev, aInstData: updated }));
+    }
+  }, [cbamData.installationDetails]);
+
+  
+
   const validateCurrentStep = React.useCallback((step: number): DataValidationStatus => {
     switch (step) {
-      case 0: // Company Info
+      case 0:
         return validateCBAMSectionsStatus(cbamData, ['companyInfo']);
-      case 1: // Report Config
-        return validateCBAMSectionsStatus(cbamData, ['reportConfig']);
-      case 2: // Installation Details
-        return validateCBAMSectionsStatus(cbamData, ['installationDetails']);
+      case 1:
+        {
+          const v = validateAInstData(cbamData.aInstData || DEFAULT_AINST_DATA);
+          return {
+            isValid: v.isValid,
+            errors: v.errors.map(e => e.message),
+            warnings: v.warnings.map(w => w.message),
+            hasMissingData: v.errors.length > 0,
+            hasInconsistentData: v.warnings.length > 0
+          };
+        }
+      case 2:
+        return { isValid: true, errors: [], warnings: [], hasMissingData: false, hasInconsistentData: false };
       case 3:
-        return { isValid: true, errors: [], warnings: [], hasMissingData: false, hasInconsistentData: false };
-      case 4:
-        return { isValid: true, errors: [], warnings: [], hasMissingData: false, hasInconsistentData: false };
-        // No strict validations for this step yet
-      case 5: // C_InstEmissions - Emissions and Energy Balance
         return validateCBAMSectionsStatus(cbamData, ['cInstEmissions']);
-      case 6: // E_Purchased - Purchased Precursors
-        return validateCBAMSectionsStatus(cbamData, ['ePurchased']);
-      case 7: // B_EmInst - Emission Sources
-        return validateCBAMSectionsStatus(cbamData, ['bEmInstData']);
-      case 8: // Energy Fuel Data
+      case 4:
         return validateCBAMSectionsStatus(cbamData, ['energyFuelData']);
-      case 9: // Process Production Data
-        return validateCBAMSectionsStatus(cbamData, ['processProductionData']);
-      case 10: // Purchased Precursors (legacy)
-        return validateCBAMSectionsStatus(cbamData, ['purchasedPrecursors']);
-      case 11: // Results
+      case 5:
+        return validateCBAMSectionsStatus(cbamData, ['dProcessesData', 'processProductionData']);
+      case 6:
+        return validateCBAMSectionsStatus(cbamData, ['ePurchased']);
+      case 7:
         return { isValid: true, errors: [], warnings: [], hasMissingData: false, hasInconsistentData: false };
       default:
         return { isValid: true, errors: [], warnings: [], hasMissingData: false, hasInconsistentData: false };
@@ -232,26 +308,97 @@ const CBAMWizard: React.FC = () => {
       case 0:
         return <CompanyInfoStep data={cbamData.companyInfo} updateData={(data) => updateCBAMData({ companyInfo: data })} validationStatus={validationStatus} />;
       case 1:
-        return <ReportConfigStep data={cbamData.reportConfig} updateData={(data) => updateCBAMData({ reportConfig: data })} validationStatus={validationStatus} />;
-      case 2:
-        return <InstallationDetailsStep data={cbamData.installationDetails} updateData={(data) => updateCBAMData({ installationDetails: data })} validationStatus={validationStatus} />;
-      case 3:
         return <AInstDataStep data={cbamData.aInstData ?? DEFAULT_AINST_DATA} updateData={(data) => updateCBAMData({ aInstData: data })} validationStatus={validationStatus as any} />;
-      case 4:
-        return <DProcessesStep data={cbamData.dProcessesData ?? DEFAULT_DPROCESSES_DATA} onUpdate={(data) => updateCBAMData({ dProcessesData: data })} />;
-      case 5:
+      case 2:
+        return <BEmInstStep 
+          data={cbamData.bEmInstData} 
+          updateData={(data) => updateCBAMData({ bEmInstData: data })} 
+          installationDetails={cbamData.installationDetails} 
+          validationStatus={validationStatus} 
+          cInstEmissions={cbamData.cInstEmissions ?? C_INST_EMISSIONS_DEFAULTS} 
+          updateCInstEmissions={(data) => updateCBAMData({ cInstEmissions: data })}
+        />;
+      case 3:
         return <CInstEmissionsStep data={cbamData} onUpdate={(data) => setCBAMData(data)} />;
+      case 4:
+        return <EnergyFuelDataStep data={cbamData.energyFuelData} updateData={(data) => updateCBAMData({ energyFuelData: data })} emissionFactors={cbamData.emissionFactors} validationStatus={validationStatus} />;
+      case 5:
+        return (
+          <ProductionStep
+            dData={cbamData.dProcessesData ?? DEFAULT_DPROCESSES_DATA}
+            ppData={cbamData.processProductionData}
+            emissionFactors={cbamData.emissionFactors}
+            validationStatus={validationStatus}
+            onUpdateDProcesses={(data) => updateCBAMData({ dProcessesData: data })}
+            onUpdateProcessProduction={(data) => {
+              const pp = data || [];
+              const toTJ = (val: number, unit: string) => {
+                if (unit === 'GJ') return (val || 0) / 1000;
+                if (unit === 'MWh') return ((val || 0) * 3.6) / 1000;
+                return val || 0;
+              };
+              const efToTJ = (ef: number, unit: string) => {
+                if (unit === 't/GJ' || unit === 'tCO2/GJ') return (ef || 0) * 1000;
+                if (unit === 't/MWh' || unit === 'tCO2/MWh') return ((ef || 0) * 1000) / 3.6;
+                return ef || 0;
+              };
+              const dProcs = pp.map((p, idx) => {
+                const total = Number(p.totalProductionWithinInstallation ?? p.productionQuantity ?? p.productionAmount ?? 0) || 0;
+                const market = Number(p.producedForMarket ?? 0) || 0;
+                const ms = Number(p.marketSharePercent ?? (total > 0 ? Math.min(100, Math.max(0, (market / total) * 100)) : 0)) || 0;
+                const mhUnit = String(p.measurableHeatData?.unit || '');
+                const mhQtyTJ = toTJ(Number(p.measurableHeatData?.quantity || 0), mhUnit);
+                const mhImpTJ = toTJ(Number(p.measurableHeatData?.imported || 0), mhUnit);
+                const mhExpTJ = toTJ(Number(p.measurableHeatData?.exported || 0), mhUnit);
+                const mhEfTJ = efToTJ(Number(p.measurableHeatData?.emissionFactor || 0), String(p.measurableHeatData?.emissionFactorUnit || ''));
+                const elUnit = String(p.electricityUnit || 'MWh');
+                const elEFUnit = String(p.electricityEmissionFactorUnit || 't/MWh');
+                const expUnit = String(p.electricityExportedUnit || 'MWh');
+                const expEFUnit = String(p.electricityExportedEmissionFactorUnit || 't/MWh');
+                return {
+                  id: `process-${idx + 1}`,
+                  processNumber: idx + 1,
+                  name: String(p.processName || ''),
+                  productionRoute: String(p.processType || ''),
+                  unit: String(p.unit || 't'),
+                  amounts: total,
+                  producedForMarket: market,
+                  shareProducedForMarket: ms,
+                  totalProductionOnlyForMarket: !!p.isProductionOnlyForMarket,
+                  consumedInOtherProcesses: [],
+                  consumedForNonCBAMGoods: Number(p.nonCBAMAmount || 0) || 0,
+                  controlTotal: Number(p.processEmissions || 0) || 0,
+                  directlyAttributableEmissions: { applicable: Number(p.processEmissions || 0) > 0, amount: Number(p.processEmissions || 0) || 0, unit: 'tCO2e', calculationMethod: '', dataSource: '' },
+                  measurableHeat: { applicable: !!p.applicableElements?.measurableHeat, netAmount: mhQtyTJ, unit: 'TJ', emissionFactor: mhEfTJ, emissionFactorUnit: 'tCO2/TJ', imported: mhImpTJ, exported: mhExpTJ, },
+                  wasteGases: { applicable: !!p.applicableElements?.wasteGases, amount: 0, unit: 'TJ', emissionFactor: 0, emissionFactorUnit: 'tCO2/TJ', imported: 0, exported: 0 },
+                  indirectEmissions: { applicable: !!p.applicableElements?.indirectEmissions, electricityConsumption: Number(p.electricityConsumption || 0) || 0, electricityUnit: elUnit === 'kWh' ? 'kWh' : elUnit === 'GJ' ? 'GJ' : 'MWh', emissionFactor: Number(p.electricityEmissionFactor || 0) || 0, emissionFactorUnit: elEFUnit === 't/kWh' ? 'tCO2/kWh' : elEFUnit === 't/GJ' ? 'tCO2/GJ' : 'tCO2/MWh', emissionFactorSource: '', emissionFactorMethod: '' },
+                  electricityExported: { applicable: Number(p.electricityExportedAmount || 0) > 0, exportedAmount: Number(p.electricityExportedAmount || 0) || 0, unit: expUnit === 'kWh' ? 'kWh' : expUnit === 'GJ' ? 'GJ' : 'MWh', emissionFactor: Number(p.electricityExportedEmissionFactor || 0) || 0, emissionFactorUnit: expEFUnit === 't/kWh' ? 'tCO2/kWh' : expEFUnit === 't/GJ' ? 'tCO2/GJ' : 'tCO2/MWh' },
+                  inputOutputMatrix: { processToProcess: [], processToProduct: [], precursorConsumption: [], totalInputs: [], totalOutputs: [], netProduction: [], matrixSize: 0, goodsProduced: [], precursors: [] },
+                  validationStatus: { isComplete: false, missingFields: [], errors: [], warnings: [], completenessPercentage: 0, productionDataComplete: false, emissionsDataComplete: false, inputOutputMatrixComplete: false, calculationsValid: false },
+                  calculatedEmissions: { directEmissionsTotal: 0, directEmissionsPerUnit: 0, indirectEmissionsTotal: 0, indirectEmissionsPerUnit: 0, heatEmissionsTotal: 0, heatEmissionsPerUnit: 0, wasteGasEmissionsTotal: 0, wasteGasEmissionsPerUnit: 0, electricityExportCredit: 0, netAttributedEmissions: 0, netAttributedEmissionsPerUnit: 0, specificEmbeddedEmissions: 0, uncertaintyPercentage: 0, confidenceInterval: [0, 0] },
+                  excelRowMapping: {}
+                } as any;
+              });
+              const dps = cbamData.dProcessesData ?? DEFAULT_DPROCESSES_DATA;
+              const merged = { 
+                ...dps,
+                productionProcesses: dProcs,
+                processSummary: {
+                  totalProcesses: dProcs.length,
+                  totalProduction: dProcs.reduce((s, p: any) => s + (p.amounts || 0), 0),
+                  totalAttributedEmissions: dProcs.reduce((s, p: any) => s + (p.calculatedEmissions?.netAttributedEmissions || 0), 0),
+                  averageSEE: dProcs.length ? dProcs.reduce((s, p: any) => s + (p.calculatedEmissions?.specificEmbeddedEmissions || 0), 0) / dProcs.length : 0,
+                  processesWithCompleteData: dProcs.filter((p: any) => !!p.name && !!p.unit && (p.amounts || 0) > 0).length,
+                  processesWithValidCalculations: dProcs.length
+                }
+              };
+              updateCBAMData({ processProductionData: data, dProcessesData: merged });
+            }}
+          />
+        );
       case 6:
         return <EPurchasedStep data={cbamData} onUpdate={(data) => setCBAMData(data)} />;
       case 7:
-        return <BEmInstStep data={cbamData.bEmInstData} updateData={(data) => updateCBAMData({ bEmInstData: data })} installationDetails={cbamData.installationDetails} validationStatus={validationStatus} />;
-      case 8:
-        return <EnergyFuelDataStep data={cbamData.energyFuelData} updateData={(data) => updateCBAMData({ energyFuelData: data })} emissionFactors={cbamData.emissionFactors} validationStatus={validationStatus} />;
-      case 9:
-        return <ProcessProductionDataStep data={cbamData.processProductionData} updateData={(data) => updateCBAMData({ processProductionData: data })} emissionFactors={cbamData.emissionFactors} validationStatus={validationStatus} />;
-      case 10:
-        return <PurchasedPrecursorsForm data={cbamData.purchasedPrecursors} updateData={(data) => updateCBAMData({ purchasedPrecursors: data })} validationStatus={validationStatus} />;
-      case 11:
         return <ResultsExportStep data={cbamData} calculationResults={cbamData.calculationResults} onExport={handleExport} />;
       default:
         return 'Unknown step';
@@ -269,8 +416,8 @@ const CBAMWizard: React.FC = () => {
         totalSteps={steps.length}
         validationStatus={validationStatus}
         onStepChange={setActiveStep}
-        title="CBAM čarobnjak komunikacijskog predloška"
-        subtitle="Izrada izvještaja o ugrađenim emisijama"
+        title="CBAM Kalkulator Emisija (Instalacije)"
+        subtitle="Izračun i izvještaj o ugrađenim emisijama"
       />
       
       <Box sx={{ p: { xs: 2, sm: 3, md: 4 }, maxWidth: 'lg', mx: 'auto' }}>
@@ -319,9 +466,23 @@ const CBAMWizard: React.FC = () => {
                 </Button>
               )}
               {!currentStepValidation.isValid && (
-                <Box sx={{ color: 'error.main', fontSize: 12 }}>
-                  Riješi greške prije nastavka
-                </Box>
+                <Tooltip
+                  title={(
+                    <Box sx={{ maxWidth: 360 }}>
+                      <Typography variant="caption" sx={{ fontWeight: 600 }}>Obavezna polja</Typography>
+                      {currentStepValidation.errors.slice(0, 6).map((msg, i) => (
+                        <Typography key={`req-${i}`} variant="caption" display="block">{msg}</Typography>
+                      ))}
+                      {currentStepValidation.errors.length > 6 && (
+                        <Typography variant="caption" display="block">{`+ još ${currentStepValidation.errors.length - 6}…`}</Typography>
+                      )}
+                    </Box>
+                  )}
+                >
+                  <Box sx={{ color: 'error.main', fontSize: 12, cursor: 'help' }}>
+                    Riješi greške prije nastavka
+                  </Box>
+                </Tooltip>
               )}
             </Box>
           </Box>
